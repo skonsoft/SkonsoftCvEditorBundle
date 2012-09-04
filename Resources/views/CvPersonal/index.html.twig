@@ -1,0 +1,63 @@
+{% extends 'ToaTwitterBootstrapBundle::layout.html.twig' %}
+{% block content %}
+
+<h1 class="page-header">{{ 'CvPersonal'|trans }} {{ 'list'|trans }}</h1>
+
+<table class="records_list table table-bordered table-condensed table-striped">
+    <thead>
+        <tr>
+            <th>{{ 'Id'|trans }}</th>
+            <th>{{ 'Lastname'|trans }}</th>
+            <th>{{ 'Lastnameprefix'|trans }}</th>
+            <th>{{ 'Initials'|trans }}</th>
+            <th>{{ 'Firstname'|trans }}</th>
+            <th>{{ 'Middlename'|trans }}</th>
+            <th>{{ 'Title'|trans }}</th>
+            <th>{{ 'Dateofbirth'|trans }}</th>
+            <th>{{ 'Placeofbirth'|trans }}</th>
+            <th>{{ 'Maritalstatus'|trans }}</th>
+            <th>{{ 'Nationality'|trans }}</th>
+            <th>{{ 'Gendercode'|trans }}</th>
+            <th>{{ 'Driverslicence'|trans }}</th>
+            <th>{{ 'Availability'|trans }}</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('cv_personal_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.lastName }}</td>
+            <td>{{ entity.lastNamePrefix }}</td>
+            <td>{{ entity.initials }}</td>
+            <td>{{ entity.firstName }}</td>
+            <td>{{ entity.middleName }}</td>
+            <td>{{ entity.title }}</td>
+            <td>{% if entity.dateOfBirth %}{{ entity.dateOfBirth|date('Y-m-d') }}{% endif %}</td>
+            <td>{{ entity.placeOfBirth }}</td>
+            <td>{{ entity.maritalStatus }}</td>
+            <td>{{ entity.nationality }}</td>
+            <td>{{ entity.genderCode }}</td>
+            <td>{{ entity.driversLicence }}</td>
+            <td>{{ entity.availability }}</td>
+            <td>
+                <a class="btn btn-mini" href="{{ path('cv_personal_show', { 'id': entity.id }) }}">
+                    <i class="icon-eye-open"></i>
+                    {{ 'show'|trans }}
+                </a>
+                <a class="btn btn-mini" href="{{ path('cv_personal_edit', { 'id': entity.id }) }}">
+                    <i class="icon-pencil"></i>
+                    {{ 'edit'|trans }}
+                </a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<a class="btn" href="{{ path('cv_personal_new') }}">
+    <i class="icon-plus"></i>
+    {{ 'create a new entry'|trans }}
+</a>
+
+{% endblock %}
