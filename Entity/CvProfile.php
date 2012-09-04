@@ -76,7 +76,7 @@ class CvProfile
     /**
      * @var CvPersonal
      *
-     * @ORM\ManyToOne(targetEntity="CvPersonal")
+     * @ORM\ManyToOne(targetEntity="CvPersonal", cascade={"persist"})
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="cv_personal_id", referencedColumnName="id")
      * })
@@ -93,6 +93,10 @@ class CvProfile
 
     public function __construct() {
         $this->cvEducationHistories = new ArrayCollection();
+    }
+    
+    public function __toString() {
+        return $this->cvPersonal->__toString();
     }
 
     /**

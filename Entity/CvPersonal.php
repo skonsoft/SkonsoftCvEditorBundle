@@ -115,16 +115,18 @@ class CvPersonal
     /**
      * @var CvAddress
      *
-     * @ORM\ManyToOne(targetEntity="CvAddress")
+     * @ORM\ManyToOne(targetEntity="CvAddress", cascade={"persist"})
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="cv_address_id", referencedColumnName="id")
      * })
      */
     private $cvAddress;
 
+    public function __toString() {
+        return $this->getLastName()." ".$this->getFirstName();
+    }
 
-
-    /**
+        /**
      * Get id
      *
      * @return integer 

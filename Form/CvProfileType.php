@@ -15,8 +15,7 @@ class CvProfileType extends AbstractType
             ->add('salary')
             ->add('totalExperienceYears')
             ->add('cvClient')
-            ->add('cvPersonal', new CvPersonalType())
-            ->add('CvUploadedDocument', new CvUploadedDocumentType())
+            ->add('cvPersonal', new CvPersonalType(), array('cascade_validation' => true,))
             ->add('cvEducationHistories', 'collection', array(
                                                     'type' => new CvEducationHistoryType(),
                                                     'allow_add' => true,
