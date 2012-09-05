@@ -22,6 +22,12 @@ class CvProfileType extends AbstractType
                                                     'by_reference' => false,
                                                     'cascade_validation' => true,
                 ) )
+            ->add('cvEmploymentHistories', 'collection', array(
+                                                    'type' => new CvEmploymentHistoryType(),
+                                                    'allow_add' => true,
+                                                    'by_reference' => false,
+                                                    'cascade_validation' => true,
+                ) )
         ;
     }
 

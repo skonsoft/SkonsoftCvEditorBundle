@@ -88,10 +88,18 @@ class CvProfile
      * @ORM\OneToMany(targetEntity="CvEducationHistory", mappedBy="cvProfile", cascade={"persist", "remove"} )
      */
     private $cvEducationHistories;
+    
+    /**
+     *
+     * @var ArrayCollection
+     * @ORM\OneToMany(targetEntity="CvEmploymentHistory", mappedBy="cvProfile", cascade={"persist", "remove"} )
+     */
+    private $cvEmploymentHistories;
 
     public function __construct()
     {
         $this->cvEducationHistories = new ArrayCollection();
+        $this->cvEmploymentHistories = new ArrayCollection();
     }
     
     public function __toString() {
@@ -314,6 +322,55 @@ class CvProfile
         $this->cvEducationHistories = new ArrayCollection();
         foreach ($cvEducationHistories as $cvEducationHistory) {
             $this->addCvEducationHistorie($cvEducationHistory);
+        }
+        return $this;
+    }
+
+
+    /**
+     * Add cvEmploymentHistories
+     *
+     * @param Skonsoft\Bundle\CvEditorBundle\Entity\CvEmploymentHistory $cvEmploymentHistories
+     * @return CvProfile
+     */
+    public function addCvEmploymentHistorie(\Skonsoft\Bundle\CvEditorBundle\Entity\CvEmploymentHistory $cvEmploymentHistories)
+    {
+        $cvEmploymentHistories->setCvProfile($this);
+        $this->cvEmploymentHistories[] = $cvEmploymentHistories;
+    
+        return $this;
+    }
+
+    /**
+     * Remove cvEmploymentHistories
+     *
+     * @param Skonsoft\Bundle\CvEditorBundle\Entity\CvEmploymentHistory $cvEmploymentHistories
+     */
+    public function removeCvEmploymentHistorie(\Skonsoft\Bundle\CvEditorBundle\Entity\CvEmploymentHistory $cvEmploymentHistories)
+    {
+        $this->cvEmploymentHistories->removeElement($cvEmploymentHistories);
+    }
+
+    /**
+     * Get cvEmploymentHistories
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCvEmploymentHistories()
+    {
+        return $this->cvEmploymentHistories;
+    }
+    
+    /**
+     * set cvEmploymentHistories
+     *
+     * @return CvProfile 
+     */
+    public function setCvEmploymentHistories($cvEmploymentHistories)
+    {
+        $this->cvEmploymentHistories = new ArrayCollection();
+        foreach ($cvEmploymentHistories as $cvEmploymentHistory) {
+            $this->addCvEmploymentHistorie($cvEmploymentHistory);
         }
         return $this;
     }

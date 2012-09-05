@@ -5,12 +5,12 @@ namespace Skonsoft\Bundle\CvEditorBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Skonsoft\Bundle\CvEditorBundle\Entity\EmploymentHistory
+ * Skonsoft\Bundle\CvEditorBundle\Entity\CvEmploymentHistory
  *
- * @ORM\Table(name="employment_history")
+ * @ORM\Table(name="cv_employment_history")
  * @ORM\Entity
  */
-class EmploymentHistory
+class CvEmploymentHistory
 {
     /**
      * @var integer $id
@@ -80,7 +80,7 @@ class EmploymentHistory
     /**
      * @var CvProfile
      *
-     * @ORM\ManyToOne(targetEntity="CvProfile")
+     * @ORM\ManyToOne(targetEntity="CvProfile", inversedBy="cvEmploymentHistories")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="cv_profile_id", referencedColumnName="id")
      * })

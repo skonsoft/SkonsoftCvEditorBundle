@@ -63,7 +63,17 @@
         </p>
     </div>
 
-    <div class="tab-pane" id="experiences">...</div>
+    <div class="tab-pane" id="experiences">
+        <div id="experiences_form">
+            {{ form_errors(form.cvEmploymentHistories) }}
+            {{ form_widget(form.cvEmploymentHistories) }}
+        </div>
+        <p>
+            <button class="btn" id="addCvEmployHistory" type="button">
+                <i class="icon-plus"></i>
+            </button>
+        </p>
+    </div>
 
     <div class="tab-pane" id="others">
                         {{ form_rest(form)}}
@@ -79,10 +89,14 @@ jQuery(function () {
         addTagForm("#studies #studies_form","addCvEducHistory" );
     });
     
+    $("#addCvEmployHistory").click(function () {
+        addTagForm("#experiences #experiences_form","addCvEmployHistory" );
+    });
+    
 });
       
 function addTagForm(div, idLinkAdd) {
-    var collectionHolder = $(div+" > div");
+    var collectionHolder = $(div+" > div");dump($(div+" > div"));
     // Récupère l'élément ayant l'attribut data-prototype comme expliqué plus tôt
     var prototype = collectionHolder.attr('data-prototype');
 
@@ -94,4 +108,5 @@ function addTagForm(div, idLinkAdd) {
     var $newFormLi = $('<div></div>').append(newForm);
     $("#"+idLinkAdd).parent().before($newFormLi);
 }
+
 </script>

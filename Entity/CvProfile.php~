@@ -88,12 +88,25 @@ class CvProfile
      * @ORM\OneToMany(targetEntity="CvEducationHistory", mappedBy="cvProfile", cascade={"persist", "remove"} )
      */
     private $cvEducationHistories;
+    
+    /**
+     *
+     * @var ArrayCollection
+     * @ORM\OneToMany(targetEntity="CvEmploymentHistory", mappedBy="cvProfile", cascade={"persist", "remove"} )
+     */
+    private $cvEmploymentHistories;
 
     public function __construct()
     {
         $this->cvEducationHistories = new ArrayCollection();
+        $this->cvEmploymentHistories = new ArrayCollection();
     }
     
+    public function __toString() {
+        return $this->getCvPersonal()->__toString();
+    }
+
+
     /**
      * Get id
      *
@@ -273,6 +286,7 @@ class CvProfile
      */
     public function addCvEducationHistorie(\Skonsoft\Bundle\CvEditorBundle\Entity\CvEducationHistory $cvEducationHistories)
     {
+        $cvEducationHistories->setCvProfile($this);
         $this->cvEducationHistories[] = $cvEducationHistories;
     
         return $this;
@@ -301,11 +315,15 @@ class CvProfile
     /**
      * set cvEducationHistories
      *
-     * @return Doctrine\Common\Collections\Collection 
+     * @return CvProfile 
      */
-    public function setCvEducationHistories(ArrayCollection $cvEducationHistories)
+    public function setCvEducationHistories($cvEducationHistories)
     {
-        $this->cvEducationHistories = $cvEducationHistories;
+        $this->cvEducationHistories = new ArrayCollection();
+        foreach ($cvEducationHistories as $cvEducationHistory) {
+            $this->addCvEducationHistorie($cvEducationHistory);
+        }
         return $this;
     }
+
 }
