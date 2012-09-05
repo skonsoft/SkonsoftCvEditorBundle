@@ -38,9 +38,31 @@
           {{ form_widget(form.cvPersonal.CvAddress) }}
             </div>
 
-            <div>
+            <div id="coordonnee">
                 <h2>Coordonnées</h2>
-          {{ form_widget(form.cvPersonal.CvAddress) }}
+                <h5>Tél/fax</h5>
+                <div id="phones_form">
+                    {{ form_errors(form.cvPersonal.CvPhones) }}
+                    {{ form_widget(form.cvPersonal.CvPhones) }}
+                </div>
+                <p>
+                    <button class="btn" id="addCvPhone" type="button">
+                        <i class="icon-plus"></i>
+                    </button>
+                </p>
+                
+                <hr />
+                <h5>E-mails</h5>
+                <div id="emails_form">
+                    {{ form_errors(form.cvPersonal.CvEmails) }}
+                    {{ form_widget(form.cvPersonal.CvEmails) }}
+                </div>
+                <p>
+                    <button class="btn" id="addCvEmail" type="button">
+                        <i class="icon-plus"></i>
+                    </button>
+                </p>
+                
             </div>
 
             <div>
@@ -76,6 +98,78 @@
     </div>
 
     <div class="tab-pane" id="others">
+        <h3>Language Skills</h3>
+        <div id="languages_form">
+            {{ form_errors(form.cvLanguageSkills) }}
+            {{ form_widget(form.cvLanguageSkills) }}
+        </div>
+        <p>
+            <button class="btn" id="addCvLanguageSkill" type="button">
+                <i class="icon-plus"></i>
+            </button>
+        </p>
+        <hr />
+        
+        <h3>Benefits</h3>
+        <div id="benefits_form">
+            {{ form_errors(form.cvBenefits) }}
+            {{ form_widget(form.cvBenefits) }}
+        </div>
+        <p>
+            <button class="btn" id="addCvBenefit" type="button">
+                <i class="icon-plus"></i>
+            </button>
+        </p>
+        <hr />
+        
+        <h3>Soft Skills</h3>
+        <div id="softSkills_form">
+            {{ form_errors(form.cvSoftSkills) }}
+            {{ form_widget(form.cvSoftSkills) }}
+        </div>
+        <p>
+            <button class="btn" id="addCvSoftSkills" type="button">
+                <i class="icon-plus"></i>
+            </button>
+        </p>
+        <hr />
+        
+        <h3>hobbies</h3>
+        <div id="hobbies_form">
+            {{ form_errors(form.cvHobbies) }}
+            {{ form_widget(form.cvHobbies) }}
+        </div>
+        <p>
+            <button class="btn" id="addCvHobbies" type="button">
+                <i class="icon-plus"></i>
+            </button>
+        </p>
+        <hr />
+        
+        <h3>References</h3>
+        <div id="references_form">
+            {{ form_errors(form.cvReferences) }}
+            {{ form_widget(form.cvReferences) }}
+        </div>
+        <p>
+            <button class="btn" id="addCvReferences" type="button">
+                <i class="icon-plus"></i>
+            </button>
+        </p>
+        <hr />
+        
+        <h3>Computer Skills</h3>
+        <div id="computerSkills_form">
+            {{ form_errors(form.cvComputerSkills) }}
+            {{ form_widget(form.cvComputerSkills) }}
+        </div>
+        <p>
+            <button class="btn" id="addCvComputerSkills" type="button">
+                <i class="icon-plus"></i>
+            </button>
+        </p>
+        <hr />
+        
                         {{ form_rest(form)}}
     </div>
 
@@ -93,6 +187,37 @@ jQuery(function () {
         addTagForm("#experiences #experiences_form","addCvEmployHistory" );
     });
     
+    $("#addCvLanguageSkill").click(function () {
+        addTagForm("#others #languages_form","addCvLanguageSkill" );
+    });
+    
+    $("#addCvBenefit").click(function () {
+        addTagForm("#others #benefits_form","addCvBenefit" );
+    });
+    
+    $("#addCvSoftSkills").click(function () {
+        addTagForm("#others #softSkills_form","addCvSoftSkills" );
+    });
+    
+    $("#addCvHobbies").click(function () {
+        addTagForm("#others #hobbies_form","addCvHobbies" );
+    });
+    
+    $("#addCvReferences").click(function () {
+        addTagForm("#others #references_form","addCvReferences" );
+    });
+    
+    $("#addCvComputerSkills").click(function () {
+        addTagForm("#others #computerSkills_form","addCvComputerSkills" );
+    });
+    
+    $("#addCvPhone").click(function () {
+        addTagForm("#coordonnee #phones_form","addCvPhone" );
+    });
+    
+    $("#addCvEmail").click(function () {
+        addTagForm("#coordonnee #emails_form","addCvEmail" );
+    });
 });
       
 function addTagForm(div, idLinkAdd) {

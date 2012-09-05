@@ -12,6 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class CvPersonal
 {
+
     /**
      * @var integer $id
      *
@@ -121,7 +122,21 @@ class CvPersonal
      * })
      */
     private $cvAddress;
-    
+
+    /**
+     *
+     * @var ArrayCollection $cvEmails
+     * @ORM\OneToMany(targetEntity="CvEmail", mappedBy="cvPersonal", cascade={"persist", "remove"} )
+     */
+    private $cvEmails;
+
+    /**
+     * @var cvPhones
+     *
+     * @ORM\OneToMany(targetEntity="CvPhone", mappedBy="cvPersonal", cascade={"persist", "remove"} )
+     */
+    private $cvPhones;
+
     /**
      * @var CvProfile
      * 
@@ -129,10 +144,10 @@ class CvPersonal
      */
     private $cvProfile;
 
-    public function __toString() {
-        return $this->getLastName()."  " . $this->getFirstName();
+    public function __toString()
+    {
+        return $this->getLastName() . "  " . $this->getFirstName();
     }
-
 
     /**
      * Get id
@@ -153,7 +168,7 @@ class CvPersonal
     public function setLastName($lastName)
     {
         $this->lastName = $lastName;
-    
+
         return $this;
     }
 
@@ -176,7 +191,7 @@ class CvPersonal
     public function setLastNamePrefix($lastNamePrefix)
     {
         $this->lastNamePrefix = $lastNamePrefix;
-    
+
         return $this;
     }
 
@@ -199,7 +214,7 @@ class CvPersonal
     public function setInitials($initials)
     {
         $this->initials = $initials;
-    
+
         return $this;
     }
 
@@ -222,7 +237,7 @@ class CvPersonal
     public function setFirstName($firstName)
     {
         $this->firstName = $firstName;
-    
+
         return $this;
     }
 
@@ -245,7 +260,7 @@ class CvPersonal
     public function setMiddleName($middleName)
     {
         $this->middleName = $middleName;
-    
+
         return $this;
     }
 
@@ -268,7 +283,7 @@ class CvPersonal
     public function setTitle($title)
     {
         $this->title = $title;
-    
+
         return $this;
     }
 
@@ -291,7 +306,7 @@ class CvPersonal
     public function setDateOfBirth($dateOfBirth)
     {
         $this->dateOfBirth = $dateOfBirth;
-    
+
         return $this;
     }
 
@@ -314,7 +329,7 @@ class CvPersonal
     public function setPlaceOfBirth($placeOfBirth)
     {
         $this->placeOfBirth = $placeOfBirth;
-    
+
         return $this;
     }
 
@@ -337,7 +352,7 @@ class CvPersonal
     public function setMaritalStatus($maritalStatus)
     {
         $this->maritalStatus = $maritalStatus;
-    
+
         return $this;
     }
 
@@ -360,7 +375,7 @@ class CvPersonal
     public function setNationality($nationality)
     {
         $this->nationality = $nationality;
-    
+
         return $this;
     }
 
@@ -383,7 +398,7 @@ class CvPersonal
     public function setGenderCode($genderCode)
     {
         $this->genderCode = $genderCode;
-    
+
         return $this;
     }
 
@@ -406,7 +421,7 @@ class CvPersonal
     public function setDriversLicence($driversLicence)
     {
         $this->driversLicence = $driversLicence;
-    
+
         return $this;
     }
 
@@ -429,7 +444,7 @@ class CvPersonal
     public function setAvailability($availability)
     {
         $this->availability = $availability;
-    
+
         return $this;
     }
 
@@ -452,7 +467,7 @@ class CvPersonal
     public function setCvAddress(\Skonsoft\Bundle\CvEditorBundle\Entity\CvAddress $cvAddress = null)
     {
         $this->cvAddress = $cvAddress;
-    
+
         return $this;
     }
 
@@ -475,7 +490,7 @@ class CvPersonal
     public function setCvProfile(\Skonsoft\Bundle\CvEditorBundle\Entity\CvProfile $cvProfile = null)
     {
         $this->cvProfile = $cvProfile;
-    
+
         return $this;
     }
 
@@ -488,4 +503,110 @@ class CvPersonal
     {
         return $this->cvProfile;
     }
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->cvEmails = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->cvPhones = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add cvEmails
+     *
+     * @param Skonsoft\Bundle\CvEditorBundle\Entity\CvEmail $cvEmails
+     * @return CvPersonal
+     */
+    public function addCvEmail(\Skonsoft\Bundle\CvEditorBundle\Entity\CvEmail $cvEmails)
+    {
+        $cvEmails->setCvProfile($this);
+        $this->cvEmails[] = $cvEmails;
+
+        return $this;
+    }
+
+    /**
+     * Remove cvEmails
+     *
+     * @param Skonsoft\Bundle\CvEditorBundle\Entity\CvEmail $cvEmails
+     */
+    public function removeCvEmail(\Skonsoft\Bundle\CvEditorBundle\Entity\CvEmail $cvEmails)
+    {
+        $this->cvEmails->removeElement($cvEmails);
+    }
+
+    /**
+     * Get cvEmails
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCvEmails()
+    {
+        return $this->cvEmails;
+    }
+
+    /**
+     * set cvEmails
+     *
+     * @return CvProfile 
+     */
+    public function setCvEmails($cvEmails)
+    {
+        $this->cvEmails = new ArrayCollection();
+        foreach ($cvEmails as $cvEmail) {
+            $this->addCvEmail($cvEmail);
+        }
+        return $this;
+    }
+
+    /**
+     * Add cvPhones
+     *
+     * @param Skonsoft\Bundle\CvEditorBundle\Entity\CvPhone $cvPhones
+     * @return CvPersonal
+     */
+    public function addCvPhone(\Skonsoft\Bundle\CvEditorBundle\Entity\CvPhone $cvPhones)
+    {
+        $cvPhones->setCvProfile($this);
+        $this->cvPhones[] = $cvPhones;
+
+        return $this;
+    }
+
+    /**
+     * Remove cvPhones
+     *
+     * @param Skonsoft\Bundle\CvEditorBundle\Entity\CvPhone $cvPhones
+     */
+    public function removeCvPhone(\Skonsoft\Bundle\CvEditorBundle\Entity\CvPhone $cvPhones)
+    {
+        $this->cvPhones->removeElement($cvPhones);
+    }
+
+    /**
+     * Get cvPhones
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCvPhones()
+    {
+        return $this->cvPhones;
+    }
+
+    /**
+     * set cvPhones
+     *
+     * @return CvProfile 
+     */
+    public function setcvPhones($cvPhones)
+    {
+        $this->cvPhones = new ArrayCollection();
+        foreach ($cvPhones as $cvPhone) {
+            $this->addCvPhone($cvPhone);
+        }
+        return $this;
+    }
+
 }

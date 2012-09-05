@@ -28,6 +28,43 @@ class CvProfileType extends AbstractType
                                                     'by_reference' => false,
                                                     'cascade_validation' => true,
                 ) )
+            ->add('cvLanguageSkills', 'collection', array(
+                                                    'type' => new CvLanguageSkillType(),
+                                                    'allow_add' => true,
+                                                    'by_reference' => false,
+                                                    'cascade_validation' => true,
+                ) )
+            ->add('cvBenefits', 'collection', array(
+                                                    'type' => new CvBenefitType(),
+                                                    'allow_add' => true,
+                                                    'by_reference' => false,
+                                                    'cascade_validation' => true,
+                ) )
+            ->add('cvSoftSkills', 'collection', array(
+                                                    'type' => new CvSoftSkillType(),
+                                                    'allow_add' => true,
+                                                    'by_reference' => false,
+                                                    'cascade_validation' => true,
+                ) )
+                
+            ->add('cvHobbies', 'collection', array(
+                                                    'type' => new CvHobbyType(),
+                                                    'allow_add' => true,
+                                                    'by_reference' => false,
+                                                    'cascade_validation' => true,
+                ) )
+            ->add('cvReferences', 'collection', array(
+                                                    'type' => new CvReferenceType(),
+                                                    'allow_add' => true,
+                                                    'by_reference' => false,
+                                                    'cascade_validation' => true,
+                ) )
+            ->add('cvComputerSkills', 'collection', array(
+                                                    'type' => new CvComputerSkillType(),
+                                                    'allow_add' => true,
+                                                    'by_reference' => false,
+                                                    'cascade_validation' => true,
+                ) )
         ;
     }
 

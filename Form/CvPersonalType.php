@@ -25,6 +25,18 @@ class CvPersonalType extends AbstractType
             ->add('driversLicence')
             ->add('availability')
             ->add('CvAddress', new CvAddressType())
+            ->add('CvPhones', 'collection', array(
+                                                    'type' => new CvPhoneType(),
+                                                    'allow_add' => true,
+                                                    'by_reference' => false,
+                                                    'cascade_validation' => true,
+                ) )
+            ->add('CvEmails', 'collection', array(
+                                                    'type' => new CvEmailType(),
+                                                    'allow_add' => true,
+                                                    'by_reference' => false,
+                                                    'cascade_validation' => true,
+                ) )
         ;
     }
 

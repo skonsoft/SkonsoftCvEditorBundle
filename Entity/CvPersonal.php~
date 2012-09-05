@@ -123,6 +123,20 @@ class CvPersonal
     private $cvAddress;
     
     /**
+     *
+     * @var ArrayCollection $cvEmails
+     * @ORM\OneToMany(targetEntity="CvEmail", mappedBy="cvPersonal", cascade={"persist", "remove"} )
+     */
+    private $cvEmails;
+    
+    /**
+     * @var cvPhones
+     *
+     * @ORM\OneToMany(targetEntity="CvPhone", mappedBy="cvPersonal", cascade={"persist", "remove"} )
+     */
+    private $cvPhones;
+    
+    /**
      * @var CvProfile
      * 
      * @ORM\OneToOne(targetEntity="CvProfile", mappedBy="cvPersonal")

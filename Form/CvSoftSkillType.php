@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class CvReferenceType extends AbstractType
+class CvSoftSkillType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -18,12 +18,12 @@ class CvReferenceType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Skonsoft\Bundle\CvEditorBundle\Entity\CvReference'
+            'data_class' => 'Skonsoft\Bundle\CvEditorBundle\Entity\CvSoftSkill'
         ));
     }
 
     public function getName()
     {
-        return 'skonsoft_bundle_cveditorbundle_cvreferencetype';
+        return 'skonsoft_bundle_cveditorbundle_cvsoftskilltype';
     }
 }

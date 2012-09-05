@@ -31,7 +31,7 @@ class CvEmail
     /**
      * @var CvPersonal
      *
-     * @ORM\ManyToOne(targetEntity="CvPersonal")
+     * @ORM\ManyToOne(targetEntity="CvPersonal", inversedBy="cvEmails")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="cv_personal_id", referencedColumnName="id")
      * })

@@ -5,7 +5,6 @@ namespace Skonsoft\Bundle\CvEditorBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
-
 /**
  * Skonsoft\Bundle\CvEditorBundle\Entity\CvProfile
  *
@@ -14,6 +13,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 class CvProfile
 {
+
     /**
      * @var integer $id
      *
@@ -81,14 +81,14 @@ class CvProfile
      * @@ORM\JoinColumn(name="cv_personal_id", referencedColumnName="id")
      */
     private $cvPersonal;
-    
+
     /**
      *
      * @var ArrayCollection
      * @ORM\OneToMany(targetEntity="CvEducationHistory", mappedBy="cvProfile", cascade={"persist", "remove"} )
      */
     private $cvEducationHistories;
-    
+
     /**
      *
      * @var ArrayCollection
@@ -96,16 +96,58 @@ class CvProfile
      */
     private $cvEmploymentHistories;
 
+    /**
+     *
+     * @var ArrayCollection
+     * @ORM\OneToMany(targetEntity="CvLanguageSkill", mappedBy="cvProfile", cascade={"persist", "remove"} )
+     */
+    protected $cvLanguageSkills;
+
+    /**
+     *
+     * @var ArrayCollection
+     * @ORM\OneToMany(targetEntity="CvBenefit", mappedBy="cvProfile", cascade={"persist", "remove"} )
+     */
+    protected $cvBenefits;
+
+    /**
+     *
+     * @var ArrayCollection
+     * @ORM\OneToMany(targetEntity="CvSoftSkill", mappedBy="cvProfile", cascade={"persist", "remove"} )
+     */
+    protected $cvSoftSkills;
+
+    /**
+     *
+     * @var ArrayCollection
+     * @ORM\OneToMany(targetEntity="CvHobby", mappedBy="cvProfile", cascade={"persist", "remove"} )
+     */
+    protected $cvHobbies;
+
+    /**
+     *
+     * @var ArrayCollection
+     * @ORM\OneToMany(targetEntity="CvReference", mappedBy="cvProfile", cascade={"persist", "remove"} )
+     */
+    protected $cvReferences;
+
+    /**
+     *
+     * @var ArrayCollection
+     * @ORM\OneToMany(targetEntity="CvComputerSkill", mappedBy="cvProfile", cascade={"persist", "remove"} )
+     */
+    protected $cvComputerSkills;
+
     public function __construct()
     {
         $this->cvEducationHistories = new ArrayCollection();
         $this->cvEmploymentHistories = new ArrayCollection();
     }
-    
-    public function __toString() {
+
+    public function __toString()
+    {
         return $this->getCvPersonal()->__toString();
     }
-
 
     /**
      * Get id
@@ -126,7 +168,7 @@ class CvProfile
     public function setLanguage($language)
     {
         $this->language = $language;
-    
+
         return $this;
     }
 
@@ -149,7 +191,7 @@ class CvProfile
     public function setSalary($salary)
     {
         $this->salary = $salary;
-    
+
         return $this;
     }
 
@@ -172,7 +214,7 @@ class CvProfile
     public function setTotalExperienceYears($totalExperienceYears)
     {
         $this->totalExperienceYears = $totalExperienceYears;
-    
+
         return $this;
     }
 
@@ -195,7 +237,7 @@ class CvProfile
     public function setCvClient(\Skonsoft\Bundle\CvEditorBundle\Entity\CvClient $cvClient = null)
     {
         $this->cvClient = $cvClient;
-    
+
         return $this;
     }
 
@@ -218,7 +260,7 @@ class CvProfile
     public function setCvUploadedDocument(\Skonsoft\Bundle\CvEditorBundle\Entity\CvUploadedDocument $cvUploadedDocument = null)
     {
         $this->cvUploadedDocument = $cvUploadedDocument;
-    
+
         return $this;
     }
 
@@ -241,7 +283,7 @@ class CvProfile
     public function setCvDocument(\Skonsoft\Bundle\CvEditorBundle\Entity\CvDocument $cvDocument = null)
     {
         $this->cvDocument = $cvDocument;
-    
+
         return $this;
     }
 
@@ -264,7 +306,7 @@ class CvProfile
     public function setCvPersonal(\Skonsoft\Bundle\CvEditorBundle\Entity\CvPersonal $cvPersonal = null)
     {
         $this->cvPersonal = $cvPersonal;
-    
+
         return $this;
     }
 
@@ -288,7 +330,7 @@ class CvProfile
     {
         $cvEducationHistories->setCvProfile($this);
         $this->cvEducationHistories[] = $cvEducationHistories;
-    
+
         return $this;
     }
 
@@ -311,7 +353,7 @@ class CvProfile
     {
         return $this->cvEducationHistories;
     }
-    
+
     /**
      * set cvEducationHistories
      *
@@ -326,7 +368,6 @@ class CvProfile
         return $this;
     }
 
-
     /**
      * Add cvEmploymentHistories
      *
@@ -337,7 +378,7 @@ class CvProfile
     {
         $cvEmploymentHistories->setCvProfile($this);
         $this->cvEmploymentHistories[] = $cvEmploymentHistories;
-    
+
         return $this;
     }
 
@@ -360,7 +401,7 @@ class CvProfile
     {
         return $this->cvEmploymentHistories;
     }
-    
+
     /**
      * set cvEmploymentHistories
      *
@@ -374,4 +415,293 @@ class CvProfile
         }
         return $this;
     }
+
+    /**
+     * Add cvLanguageSkills
+     *
+     * @param Skonsoft\Bundle\CvEditorBundle\Entity\CvLanguageSkill $cvLanguageSkills
+     * @return CvProfile
+     */
+    public function addCvLanguageSkill(\Skonsoft\Bundle\CvEditorBundle\Entity\CvLanguageSkill $cvLanguageSkills)
+    {
+        $cvLanguageSkills->setCvProfile($this);
+        $this->cvLanguageSkills[] = $cvLanguageSkills;
+
+        return $this;
+    }
+
+    /**
+     * Remove cvLanguageSkills
+     *
+     * @param Skonsoft\Bundle\CvEditorBundle\Entity\CvLanguageSkill $cvLanguageSkills
+     */
+    public function removeCvLanguageSkill(\Skonsoft\Bundle\CvEditorBundle\Entity\CvLanguageSkill $cvLanguageSkills)
+    {
+        $this->cvLanguageSkills->removeElement($cvLanguageSkills);
+    }
+
+    /**
+     * Get cvLanguageSkills
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCvLanguageSkills()
+    {
+        return $this->cvLanguageSkills;
+    }
+
+    /**
+     * set cvLanguageSkills
+     *
+     * @return CvProfile 
+     */
+    public function setCvLanguageSkills($cvLanguageSkills)
+    {
+        $this->cvLanguageSkills = new ArrayCollection();
+        foreach ($cvLanguageSkills as $cvLanguageSkill) {
+            $this->addCvLanguageSkill($cvLanguageSkill);
+        }
+        return $this;
+    }
+
+    /**
+     * Add cvBenefits
+     *
+     * @param Skonsoft\Bundle\CvEditorBundle\Entity\CvBenefit $cvBenefits
+     * @return CvProfile
+     */
+    public function addCvBenefit(\Skonsoft\Bundle\CvEditorBundle\Entity\CvBenefit $cvBenefits)
+    {
+        $cvBenefits->setCvProfile($this);
+        $this->cvBenefits[] = $cvBenefits;
+
+        return $this;
+    }
+
+    /**
+     * Remove cvBenefits
+     *
+     * @param Skonsoft\Bundle\CvEditorBundle\Entity\CvBenefit $cvBenefits
+     */
+    public function removeCvBenefit(\Skonsoft\Bundle\CvEditorBundle\Entity\CvBenefit $cvBenefits)
+    {
+        $this->cvBenefits->removeElement($cvBenefits);
+    }
+
+    /**
+     * Get cvBenefits
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCvBenefits()
+    {
+        return $this->cvBenefits;
+    }
+
+    /**
+     * set cvBenefits
+     *
+     * @return CvProfile 
+     */
+    public function setCvBenefits($cvBenefits)
+    {
+        $this->cvBenefits = new ArrayCollection();
+        foreach ($cvBenefits as $cvBenefit) {
+            $this->addCvBenefit($cvBenefit);
+        }
+        return $this;
+    }
+
+    /**
+     * Add cvSoftSkills
+     *
+     * @param Skonsoft\Bundle\CvEditorBundle\Entity\CvSoftSkill $cvSoftSkills
+     * @return CvProfile
+     */
+    public function addCvSoftSkill(\Skonsoft\Bundle\CvEditorBundle\Entity\CvSoftSkill $cvSoftSkills)
+    {
+        $cvSoftSkills->setCvProfile($this);
+        $this->cvSoftSkills[] = $cvSoftSkills;
+
+        return $this;
+    }
+
+    /**
+     * Remove cvSoftSkills
+     *
+     * @param Skonsoft\Bundle\CvEditorBundle\Entity\CvSoftSkill $cvSoftSkills
+     */
+    public function removeCvSoftSkill(\Skonsoft\Bundle\CvEditorBundle\Entity\CvSoftSkill $cvSoftSkills)
+    {
+        $this->cvSoftSkills->removeElement($cvSoftSkills);
+    }
+
+    /**
+     * Get cvSoftSkills
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCvSoftSkills()
+    {
+        return $this->cvSoftSkills;
+    }
+
+    /**
+     * set cvSoftSkills
+     *
+     * @return CvProfile 
+     */
+    public function setCvSoftSkills($cvSoftSkills)
+    {
+        $this->cvSoftSkills = new ArrayCollection();
+        foreach ($cvSoftSkills as $cvSoftSkill) {
+            $this->addCvSoftSkill($cvSoftSkill);
+        }
+        return $this;
+    }
+
+    /**
+     * Add cvHobbies
+     *
+     * @param Skonsoft\Bundle\CvEditorBundle\Entity\CvHobby $cvHobbies
+     * @return CvProfile
+     */
+    public function addCvHobbie(\Skonsoft\Bundle\CvEditorBundle\Entity\CvHobby $cvHobbies)
+    {
+        $cvHobbies->setCvProfile($this);
+        $this->cvHobbies[] = $cvHobbies;
+
+        return $this;
+    }
+
+    /**
+     * Remove cvHobbies
+     *
+     * @param Skonsoft\Bundle\CvEditorBundle\Entity\CvHobby $cvHobbies
+     */
+    public function removeCvHobbie(\Skonsoft\Bundle\CvEditorBundle\Entity\CvHobby $cvHobbies)
+    {
+        $this->cvHobbies->removeElement($cvHobbies);
+    }
+
+    /**
+     * Get cvHobbies
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCvHobbies()
+    {
+        return $this->cvHobbies;
+    }
+
+    /**
+     * set cvHobbies
+     *
+     * @return CvProfile 
+     */
+    public function setCvHobbies($cvHobbies)
+    {
+        $this->cvHobbies = new ArrayCollection();
+        foreach ($cvHobbies as $cvHobbie) {
+            $this->addCvHobbie($cvHobbie);
+        }
+        return $this;
+    }
+
+    /**
+     * Add cvReferences
+     *
+     * @param Skonsoft\Bundle\CvEditorBundle\Entity\CvReference $cvReferences
+     * @return CvProfile
+     */
+    public function addCvReference(\Skonsoft\Bundle\CvEditorBundle\Entity\CvReference $cvReferences)
+    {
+        $cvReferences->setCvProfile($this);
+        $this->cvReferences[] = $cvReferences;
+
+        return $this;
+    }
+
+    /**
+     * Remove cvReferences
+     *
+     * @param Skonsoft\Bundle\CvEditorBundle\Entity\CvReference $cvReferences
+     */
+    public function removeCvReference(\Skonsoft\Bundle\CvEditorBundle\Entity\CvReference $cvReferences)
+    {
+        $this->cvReferences->removeElement($cvReferences);
+    }
+
+    /**
+     * Get cvReferences
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCvReferences()
+    {
+        return $this->cvReferences;
+    }
+
+    /**
+     * set cvReferences
+     *
+     * @return CvProfile 
+     */
+    public function setCvReferences($cvReferences)
+    {
+        $this->cvReferences = new ArrayCollection();
+        foreach ($cvReferences as $cvReference) {
+            $this->addCvReference($cvReference);
+        }
+        return $this;
+    }
+
+    /**
+     * Add cvComputerSkills
+     *
+     * @param Skonsoft\Bundle\CvEditorBundle\Entity\CvComputerSkill $cvComputerSkills
+     * @return CvProfile
+     */
+    public function addCvComputerSkill(\Skonsoft\Bundle\CvEditorBundle\Entity\CvComputerSkill $cvComputerSkills)
+    {
+        $cvComputerSkills->setCvProfile($this);
+        $this->cvComputerSkills[] = $cvComputerSkills;
+
+        return $this;
+    }
+
+    /**
+     * Remove cvComputerSkills
+     *
+     * @param Skonsoft\Bundle\CvEditorBundle\Entity\CvComputerSkill $cvComputerSkills
+     */
+    public function removeCvComputerSkill(\Skonsoft\Bundle\CvEditorBundle\Entity\CvComputerSkill $cvComputerSkills)
+    {
+        $this->cvComputerSkills->removeElement($cvComputerSkills);
+    }
+
+    /**
+     * Get cvComputerSkills
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCvComputerSkills()
+    {
+        return $this->cvComputerSkills;
+    }
+
+    /**
+     * set cvComputerSkills
+     *
+     * @return CvProfile 
+     */
+    public function setCvComputerSkills($cvComputerSkills)
+    {
+        $this->cvComputerSkills = new ArrayCollection();
+        foreach ($cvComputerSkills as $cvComputerSkill) {
+            $this->addCvComputerSkill($cvComputerSkill);
+        }
+        return $this;
+    }
+
 }
