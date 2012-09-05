@@ -3,105 +3,22 @@
 {% extends 'ToaTwitterBootstrapBundle::layout.html.twig' %}
 {% block content %}
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+
 
 <h1 class="page-header">{{ 'CvProfile'|trans }} {{ 'creation'|trans }}</h1>
 
 
+<form class="form-horizontal" action="{{ path('cv_profile_create') }}" method="post" {{ form_enctype(form) }}>
 
 
-<ul class="nav nav-tabs" id="cvTab">
-  <li><a href="#profile" data-toggle="tab">Profil</a></li>
-  <li><a href="#studies" data-toggle="tab">Etudes</a></li>
-  <li><a href="#experiences" data-toggle="tab">Expérience</a></li>
-  <li><a href="#others" data-toggle="tab">Autres</a></li>
-</ul>
- 
-<div class="tab-content">
-  <div class="tab-pane active" id="profile">
-      <form class="form-horizontal" action="{{ path('cv_profile_create') }}" method="post" {{ form_enctype(form) }}>
-        <div>
-            <h2>Résumé</h2>
-            {{ form_row(form.totalExperienceYears) }}
-        </div>
-        <div>
-            <h2>Données personelles</h2>
-            {{ form_row(form.cvPersonal.lastName) }}
-            {{ form_row(form.cvPersonal.lastNamePrefix) }}
-            {{ form_row(form.cvPersonal.initials) }}
-            {{ form_row(form.cvPersonal.firstName) }}
-            {{ form_row(form.cvPersonal.middleName) }}
-            {{ form_row(form.cvPersonal.title) }}
-            {{ form_row(form.cvPersonal.dateOfBirth) }}
-            {{ form_row(form.cvPersonal.placeOfBirth) }}
-            {{ form_row(form.cvPersonal.maritalStatus) }}
-            {{ form_row(form.cvPersonal.nationality) }}
-            {{ form_row(form.cvPersonal.genderCode) }}
-            {{ form_row(form.cvPersonal.driversLicence) }}
-            {{ form_row(form.cvPersonal.availability) }}
-        </div>
-              
-        <div>
-            <h2>Adresse</h2>
-            {{ form_widget(form.cvPersonal.CvAddress) }}
-        </div>
-              
-        <div>
-            <h2>Coordonnées</h2>
-            {{ form_widget(form.cvPersonal.CvAddress) }}
-        </div>
-              
-              <div>
-                  {{ form_rest(form) }}
-              </div>
-        
-        <p>
-            <button class="btn" type="submit">
-                <i class="icon-plus"></i>
-                {{ 'update'|trans }}
-            </button>
-        </p>
-    </form>
-  </div>
-        
-  <div class="tab-pane" id="studies">
-      {{ form_widget(form.cvEducationHistories) }}
-  <p>
-      <button class="btn" id="addCvEducHistory" type="button">
+    {% include "SkonsoftCvEditorBundle:CvProfile:tabForm.html.twig" %}
+    
+    <button class="btn" type="submit">
         <i class="icon-plus"></i>
+            {{ 'Add'|trans }}
     </button>
-    <script>
-        $("#addCvEducHistory").click(function () {
-            var collectionHolder = $("#skonsoft_bundle_cveditorbundle_cvprofiletype_cvEducationHistories");
-            addTagForm(collectionHolder,"addCvEducHistory" );
-        });
-        
-        function addTagForm(collectionHolder, idLinkAdd) {
-            // Récupère l'élément ayant l'attribut data-prototype comme expliqué plus tôt
-            var prototype = collectionHolder.attr('data-prototype');
-
-            // Remplace '__name__' dans le HTML du prototype par un nombre basé sur
-            // la longueur de la collection courante
-            var newForm = prototype.replace(/__name__/g, collectionHolder.children().length);
-
-            // Affiche le formulaire dans la page dans un li, avant le lien "ajouter un tag"
-            var $newFormLi = $('<li></li>').append(newForm);
-            $("#"+idLinkAdd).parent().before($newFormLi);
-        }
-    </script>
-  </p>
-  </div>
-        
-  <div class="tab-pane" id="experiences">...</div>
-  <div class="tab-pane" id="others">...</div>
-</div>
- 
-<script>
-jQuery(function () {
-    $('#cvTab a:first').tab('show');
-  })
-</script>
-
+    
+</form>
 
     
     <a class="btn" href="{{ path('cv_profile') }}">

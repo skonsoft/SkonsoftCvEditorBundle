@@ -20,6 +20,7 @@ class CvProfileType extends AbstractType
                                                     'type' => new CvEducationHistoryType(),
                                                     'allow_add' => true,
                                                     'by_reference' => false,
+                                                    'cascade_validation' => true,
                 ) )
         ;
     }

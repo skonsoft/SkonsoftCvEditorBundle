@@ -20,7 +20,6 @@ class CvEducationHistoryType extends AbstractType
             ->add('diplomaDate')
             ->add('subject')
             ->add('isHighest')
-            ->add('cvProfile')
         ;
     }
 

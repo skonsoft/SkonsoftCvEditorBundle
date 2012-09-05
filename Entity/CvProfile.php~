@@ -94,11 +94,6 @@ class CvProfile
         $this->cvEducationHistories = new ArrayCollection();
     }
     
-    public function __toString() {
-        return $this->getCvPersonal()->__toString();
-    }
-
-
     /**
      * Get id
      *
@@ -278,7 +273,6 @@ class CvProfile
      */
     public function addCvEducationHistorie(\Skonsoft\Bundle\CvEditorBundle\Entity\CvEducationHistory $cvEducationHistories)
     {
-        $cvEducationHistories->setCvProfile($this);
         $this->cvEducationHistories[] = $cvEducationHistories;
     
         return $this;
@@ -307,14 +301,11 @@ class CvProfile
     /**
      * set cvEducationHistories
      *
-     * @return CvProfile 
+     * @return Doctrine\Common\Collections\Collection 
      */
-    public function setCvEducationHistories($cvEducationHistories)
+    public function setCvEducationHistories(ArrayCollection $cvEducationHistories)
     {
-        $this->cvEducationHistories = new ArrayCollection();
-        foreach ($cvEducationHistories as $cvEducationHistory) {
-            $this->addCvEducationHistorie($cvEducationHistory);
-        }
+        $this->cvEducationHistories = $cvEducationHistories;
         return $this;
     }
 }

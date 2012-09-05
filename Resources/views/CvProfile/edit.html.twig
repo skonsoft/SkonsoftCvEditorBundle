@@ -6,7 +6,9 @@
 <h1 class="page-header">{{ 'CvProfile'|trans }} {{ 'edit'|trans }}</h1>
 
 <form class="form-horizontal" action="{{ path('cv_profile_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
-    {{ form_widget(edit_form) }}
+    
+    {% include "SkonsoftCvEditorBundle:CvProfile:tabForm.html.twig" with {'form':edit_form} %}
+        
     <p>
         <button class="btn" type="submit">
             <i class="icon-pencil"></i>

@@ -129,11 +129,7 @@ class CvPersonal
      */
     private $cvProfile;
 
-    public function __toString() {
-        return $this->getLastName()."  " . $this->getFirstName();
-    }
-
-
+    
     /**
      * Get id
      *
