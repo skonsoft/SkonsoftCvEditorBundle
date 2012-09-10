@@ -34,7 +34,7 @@ abstract class CvBaseFactory
      * @return \Skonsoft\Bundle\CvEditorBundle\Factory\CvBaseFactory
      */
     public static function getNewInstance(){
-        $class = __CLASS__;
+        $class = get_called_class();
         return new $class();
     }
     /**

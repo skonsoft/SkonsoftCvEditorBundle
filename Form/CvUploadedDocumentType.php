@@ -11,9 +11,7 @@ class CvUploadedDocumentType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('original')
-            ->add('fileType')
-            ->add('name')
+            ->add('file')
         ;
     }
 

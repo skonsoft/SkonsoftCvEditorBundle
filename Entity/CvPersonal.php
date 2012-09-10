@@ -3,7 +3,7 @@
 namespace Skonsoft\Bundle\CvEditorBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use \Doctrine\Common\Collections\ArrayCollection;
 /**
  * Skonsoft\Bundle\CvEditorBundle\Entity\CvPersonal
  *
@@ -305,6 +305,9 @@ class CvPersonal
      */
     public function setDateOfBirth($dateOfBirth)
     {
+        if( ! $dateOfBirth instanceof \DateTime){
+            $dateOfBirth = new \DateTime($dateOfBirth);
+        }
         $this->dateOfBirth = $dateOfBirth;
 
         return $this;
@@ -521,7 +524,7 @@ class CvPersonal
      */
     public function addCvEmail(\Skonsoft\Bundle\CvEditorBundle\Entity\CvEmail $cvEmails)
     {
-        $cvEmails->setCvProfile($this);
+        $cvEmails->setCvPersonal($this);
         $this->cvEmails[] = $cvEmails;
 
         return $this;
@@ -569,7 +572,7 @@ class CvPersonal
      */
     public function addCvPhone(\Skonsoft\Bundle\CvEditorBundle\Entity\CvPhone $cvPhones)
     {
-        $cvPhones->setCvProfile($this);
+        $cvPhones->setCvPersonal($this);
         $this->cvPhones[] = $cvPhones;
 
         return $this;

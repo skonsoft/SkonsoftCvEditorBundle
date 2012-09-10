@@ -3,6 +3,7 @@
 namespace Skonsoft\Bundle\CvEditorBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Skonsoft\Bundle\CvEditorBundle\Entity\CvUploadedDocument
@@ -12,6 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class CvUploadedDocument
 {
+
     /**
      * @var integer $id
      *
@@ -42,7 +44,15 @@ class CvUploadedDocument
      */
     private $name;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    public $path;
 
+    /**
+     * @Assert\File(maxSize="6000000")
+     */
+    public $file;
 
     /**
      * Get id
@@ -63,7 +73,7 @@ class CvUploadedDocument
     public function setOriginal($original)
     {
         $this->original = $original;
-    
+
         return $this;
     }
 
@@ -86,7 +96,7 @@ class CvUploadedDocument
     public function setFileType($fileType)
     {
         $this->fileType = $fileType;
-    
+
         return $this;
     }
 
@@ -109,7 +119,7 @@ class CvUploadedDocument
     public function setName($name)
     {
         $this->name = $name;
-    
+
         return $this;
     }
 
@@ -121,5 +131,74 @@ class CvUploadedDocument
     public function getName()
     {
         return $this->name;
+    }
+
+    public function getAbsolutePath()
+    {
+        return null === $this->path ? null : $this->getUploadRootDir() . '/' . $this->path;
+    }
+
+    public function getWebPath()
+    {
+        return null === $this->path ? null : $this->getUploadDir() . '/' . $this->path;
+    }
+
+    protected function getUploadRootDir()
+    {
+        // the absolute directory path where uploaded documents should be saved
+        return __DIR__ . '/../../../../../web/' . $this->getUploadDir();
+    }
+
+    protected function getUploadDir()
+    {
+        // get rid of the __DIR__ so it doesn't screw when displaying uploaded doc/image in the view.
+        return 'uploads/cv';
+    }
+
+    public function upload()
+    {
+        // the file property can be empty if the field is not required
+        if (null === $this->file) {
+            return;
+        }
+
+        // we use the original file name here but you should
+        // sanitize it at least to avoid any security issues
+        // move takes the target directory and then the target filename to move to
+        $this->file->move($this->getUploadRootDir(), $this->file->getClientOriginalName());
+
+        // set the path property to the filename where you'ved saved the file
+        $this->path = realpath( $this->getUploadRootDir().'/'.$this->file->getClientOriginalName() );
+
+        // clean up the file property as you won't need it anymore
+        $this->file = null;
+        
+        $this->name = basename($this->path);
+        
+        $this->original = file_get_contents($this->path);
+    }
+
+
+    /**
+     * Set path
+     *
+     * @param string $path
+     * @return CvUploadedDocument
+     */
+    public function setPath($path)
+    {
+        $this->path = $path;
+    
+        return $this;
+    }
+
+    /**
+     * Get path
+     *
+     * @return string 
+     */
+    public function getPath()
+    {
+        return $this->path;
     }
 }

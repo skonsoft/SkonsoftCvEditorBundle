@@ -13,12 +13,12 @@ class CvAddressFactory extends CvBaseFactory
     public function loadFromXml($xmlNode){
         $address = new CvAddress();
         
-        $address->setStreet($this->getXmlElementValue($xmlnode, "Street"));
-        $address->setNumber($this->getXmlElementValue($xmlnode, "Number"));
-        $address->setZipCode($this->getXmlElementValue($xmlnode, "ZipCode"));
-        $address->setMunicipality($this->getXmlElementValue($xmlnode, "Municipality"));
-        $address->setRegion($this->getXmlElementValue($xmlnode, "Region"));
-        $address->setCountryCode($this->getXmlElementValue($xmlnode, "CountryCode"));
+        $address->setStreet($this->getXmlElementValue($xmlNode, "Street"));
+        $address->setNumber($this->getXmlElementValue($xmlNode, "Number"));
+        $address->setZipCode($this->getXmlElementValue($xmlNode, "ZipCode"));
+        $address->setMunicipality($this->getXmlElementValue($xmlNode, "Municipality"));
+        $address->setRegion($this->getXmlElementValue($xmlNode, "Region"));
+        $address->setCountryCode($this->getXmlElementValue($xmlNode, "CountryCode"));
         
         return $address;
     }

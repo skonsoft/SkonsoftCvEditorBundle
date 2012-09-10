@@ -15,7 +15,6 @@ class CvPersonalFactory extends CvBaseFactory
 {
     public function loadFromXml($xmlNode){
         $personal = new CvPersonal();
-        
         $personal->setLastName($this->getXmlElementValue($xmlNode, "LastName") );
         $personal->setLastNamePrefix($this->getXmlElementValue($xmlNode, "LastNamePrefix") );
         $personal->setInitials($this->getXmlElementValue($xmlNode, "Initials") );

@@ -35,6 +35,12 @@ class CvDocument
      */
     private $annotatedDocument;
 
+    /**
+     * @var CvProfile
+     * 
+     * @ORM\OneToOne(targetEntity="CvProfile", mappedBy="cvProfile")
+     */
+    private $cvProfile;
 
 
     /**

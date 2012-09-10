@@ -67,7 +67,7 @@ class CvProfile
     /**
      * @var CvDocument
      *
-     * @ORM\ManyToOne(targetEntity="CvDocument")
+     * @ORM\OneToOne(targetEntity="CvDocument",cascade={"persist", "remove"} )
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="cv_document_id", referencedColumnName="id")
      * })

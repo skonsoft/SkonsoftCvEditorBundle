@@ -130,6 +130,9 @@ class CvEmploymentHistory
      */
     public function setStartDate($startDate)
     {
+        if( ! $startDate instanceof \DateTime){
+            $startDate = new \DateTime($startDate);
+        }
         $this->startDate = $startDate;
     
         return $this;
@@ -153,6 +156,9 @@ class CvEmploymentHistory
      */
     public function setEndDate($endDate)
     {
+        if( ! $endDate instanceof \DateTime){
+            $endDate = new \DateTime($endDate);
+        }
         $this->endDate = $endDate;
     
         return $this;

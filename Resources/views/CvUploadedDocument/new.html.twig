@@ -1,0 +1,12 @@
+{% extends "SkonsoftCvEditorBundle::layout.html.twig" %}
+
+{% block container %}
+<h1>Importer un nouveau CV</h1>
+
+<form action="{{ path('cv_upload_create') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <p>
+        <button type="submit">Envoyer</button>
+    </p>
+</form>
+{% endblock %}
