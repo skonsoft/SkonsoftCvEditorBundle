@@ -3,6 +3,7 @@
 namespace Skonsoft\Bundle\CvEditorBundle\Provider;
 
 use Skonsoft\Bundle\CvEditorBundle\Nusoap;
+use Symfony\Component\DomCrawler\Crawler;
 
 /**
  * Description of TextKernelProvider
@@ -112,8 +113,8 @@ class TextKernelProvider extends BaseProvider
      */
     public function load($document)
     {
-        $this->setDocument($document);
-        $this->post();
+        //$this->setDocument($document);
+        //$this->post();
         return $this->buildFromXml();
     }
 
@@ -143,7 +144,7 @@ class TextKernelProvider extends BaseProvider
         $body = substr($response, $header_size);
         curl_close($ch);
         
-        $this->setXml($xml);
+        $this->setXml($body);
     }
 
     protected function postWithSoap()
@@ -168,6 +169,10 @@ class TextKernelProvider extends BaseProvider
      */
     protected function buildFromXml()
     {
+        $this->setXml(file_get_contents("/home/smabrouk/Downloads/cv.xml"));
+        $xml =  \simplexml_load_string($this->getXml());
+        if(!$xml)
+            throw new \Exception("Invalid Xml recieved from Text Kernel");
         
     }
 
