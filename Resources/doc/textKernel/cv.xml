@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Profile lang="french">
+    <Personal>
+        <LastName id="135+136">Mabrouk</LastName>
+        <LastNamePrefix id="135+136"></LastNamePrefix>
+        <Initials id="135+136">S.</Initials>
+        <FirstName id="135+136">Skander</FirstName>
+        <MiddleName id="135+136"></MiddleName>
+        <Title id="135+136"></Title>
+        <DateOfBirth id="133">1985-06-04</DateOfBirth>
+        <PlaceOfBirth id="130">Biadha</PlaceOfBirth>
+        <MaritalStatus></MaritalStatus> 	 
+        <Nationality></Nationality>
+        <GenderCode id="135+136+9">0</GenderCode> 	 
+        <DriversLicence></DriversLicence>
+        <Availability></Availability>
+        <Address>
+            <Street id="132">rue Tarek Ibn Zied - Menzah</Street>
+            <Number id="132">23 bis</Number>
+            <ZipCode id="132"></ZipCode>
+            <Municipality id="132"></Municipality>
+            <Region id="132+132">FR Unknown</Region>
+            <CountryCode id="132">FR</CountryCode>
+        </Address>
+        <HomePhones>
+
+        </HomePhones>
+        <MobilePhones>
+
+        </MobilePhones>
+        <Faxes>
+
+        </Faxes>
+        <Emails>
+            <Email id="128">MabroukSkander@gmail.com</Email>
+
+        </Emails>
+    </Personal>
+    <EducationHistory>
+        <EducationItem id="98">
+            <DegreeDirection id="28">Diplôme national des ingénieurs spécialité informatique</DegreeDirection>
+            <EducationType id="98">Cours</EducationType>
+            <StartDate id="15+16">2011-07-01</StartDate>
+            <EndDate id="15+16">2013-02-01</EndDate>
+            <InstituteNameAndPlace id="35">l&apos;école nationale des ingénieurs de Tunis</InstituteNameAndPlace>
+            <Diploma id="26">Mention assez-bien</Diploma>
+            <DiplomaDate></DiplomaDate>
+            <Subjects></Subjects>
+            <IsHighestItem>0</IsHighestItem>
+        </EducationItem>
+        <EducationItem id="99">
+            <DegreeDirection id="29">Certification CEFEE</DegreeDirection>
+            <EducationType id="99">Cours</EducationType>
+            <StartDate id="17"></StartDate>
+            <EndDate id="17">2008-10-01</EndDate>
+            <InstituteNameAndPlace></InstituteNameAndPlace>
+            <Diploma></Diploma>
+            <DiplomaDate></DiplomaDate>
+            <Subjects></Subjects>
+            <IsHighestItem>0</IsHighestItem>
+        </EducationItem>
+        <EducationItem id="100">
+            <DegreeDirection id="30">Maîtrise en Informatique Appliquée</DegreeDirection>
+            <EducationType id="100">Université Maitrise</EducationType>
+            <StartDate id="18+19"></StartDate>
+            <EndDate id="18+19">2008-07-01</EndDate>
+            <InstituteNameAndPlace id="36">l&apos;école supérieure de technologie et d&apos;informatique à Carthage</InstituteNameAndPlace>
+            <Diploma id="27">mention assez-bien</Diploma>
+            <DiplomaDate></DiplomaDate>
+            <Subjects></Subjects>
+            <IsHighestItem>1</IsHighestItem>
+        </EducationItem>
+        <EducationItem id="101">
+            <DegreeDirection id="31">Certifications CISCO CCNA1 et CCNA2</DegreeDirection>
+            <EducationType id="101">Cours</EducationType>
+            <StartDate></StartDate>
+            <EndDate></EndDate>
+            <InstituteNameAndPlace></InstituteNameAndPlace>
+            <Diploma></Diploma>
+            <DiplomaDate></DiplomaDate>
+            <Subjects></Subjects>
+            <IsHighestItem>0</IsHighestItem>
+        </EducationItem>
+        <EducationItem id="102">
+            <DegreeDirection id="32">Diplôme des études universitaires du premier cycle (DEUPC) en Informatique Appliquée</DegreeDirection>
+            <EducationType id="102">Secondaire Supérieur</EducationType>
+            <StartDate id="20"></StartDate>
+            <EndDate id="20">2006-06-01</EndDate>
+            <InstituteNameAndPlace></InstituteNameAndPlace>
+            <Diploma></Diploma>
+            <DiplomaDate></DiplomaDate>
+            <Subjects></Subjects>
+            <IsHighestItem>0</IsHighestItem>
+        </EducationItem>
+        <EducationItem id="103">
+            <DegreeDirection id="33">Baccalauréat avec mention assez-bien (12.62 / 20) section sciences expérimentales</DegreeDirection>
+            <EducationType id="103">Secondaire Supérieur</EducationType>
+            <StartDate id="21">2003-09-01</StartDate>
+            <EndDate id="21">2004-07-01</EndDate>
+            <InstituteNameAndPlace></InstituteNameAndPlace>
+            <Diploma></Diploma>
+            <DiplomaDate></DiplomaDate>
+            <Subjects></Subjects>
+            <IsHighestItem>0</IsHighestItem>
+        </EducationItem>
+
+    </EducationHistory>
+    <EmploymentHistory>
+        <EmploymentItem id="94">
+            <JobTitle id="109">Analyste R&amp;D</JobTitle>
+            <StartDate id="104">2011-01-01</StartDate>
+            <EndDate id="104"></EndDate>
+            <EmployerNameAndPlace id="113+114">Cortix</EmployerNameAndPlace>
+            <Description id="94+119+120">Conception et mise en production de la version 2 de l&apos;outil cxlabs V2
+                propriétaire de cortix permettant la gestion de plus de 4000 sites web
+                hébergés chez cortix.
+                Contribution à la conception et le développement des différents modules du
+                CMS propriétaire de CORTIX basé sur  le framework symfony.
+                Mise en place des solutions de paiement  en ligne ATOS, PAYBOX &amp; PayPal
+                pour les différents clients de cortix.
+                Développement du plugin symfony sfLinedInPlugin
+                Développement d&apos;un jeu dédié aux mobiles en J2ME dans le cadre de ma
+                formation d&apos;ingénieurs à l&apos;ENIT.
+                Développement d&apos;une application en JAVA pour le benchmarking des RTOS
+                (systèmes temps-réel)
+                Mini-projet J2EE( EJB ) à l&apos;ENIT pour la gestion d&apos;emploi de temps.
+            </Description>
+            <QuitReason></QuitReason>
+            <IsLastItem>1</IsLastItem>
+            <IsLastItemWithJobTitle>1</IsLastItemWithJobTitle>
+        </EmploymentItem>
+        <EmploymentItem id="95">
+            <JobTitle id="110">Développeur symfony</JobTitle>
+            <StartDate id="105">2010-01-01</StartDate>
+            <EndDate id="105"></EndDate>
+            <EmployerNameAndPlace id="115">PHP Attitude</EmployerNameAndPlace>
+            <Description id="95+121">Conception, développement et mise en place du site de vente en ligne des
+                arts africains : www.art-africain.fr
+                Conception, développement et mise en place du site web dédié aux
+                smartphone : www.pronosticlive.com
+                conception et développement de l&apos;application iPhone Intellego
+                Développement du plugin symfony sfTeraWurflPlugin
+            </Description>
+            <QuitReason></QuitReason>
+            <IsLastItem>0</IsLastItem>
+            <IsLastItemWithJobTitle>0</IsLastItemWithJobTitle>
+        </EmploymentItem>
+        <EmploymentItem id="96">
+            <JobTitle id="111">Développeur symfony</JobTitle>
+            <StartDate id="106">2009-01-01</StartDate>
+            <EndDate id="106"></EndDate>
+            <EmployerNameAndPlace id="116">Panteo</EmployerNameAndPlace>
+            <Description id="96+122">j&apos;ai contribué au développement site web : attractiveworld
+                Conception et développement de la version 2 du site web msb-online.org
+            </Description>
+            <QuitReason></QuitReason>
+            <IsLastItem>0</IsLastItem>
+            <IsLastItemWithJobTitle>0</IsLastItemWithJobTitle>
+        </EmploymentItem>
+        <EmploymentItem id="97">
+            <JobTitle id="112">Projet de fin d&apos;études</JobTitle>
+            <StartDate id="107+108">2007-01-01</StartDate>
+            <EndDate id="107+108">2008-12-31</EndDate>
+            <EmployerNameAndPlace id="117+118">ESTI</EmployerNameAndPlace>
+            <Description id="97+123+124+125">Conception et développement d&apos;une bibliothèque (PGUI) qui améliore le
+                développement en php5 coté serveur dans le cadre de mon projet de fin
+                d&apos;études chez Full Engeneering Systems.
+                2007 : Stage d&apos;été pour 3 mois
+                Conception et développement d&apos;un serveur FTP en MFC.
+                Stage d&apos;été chez TIM (Développement d&apos;une application en Delphi 6/InterBase
+                permettant la gestion des ressources humaines, la gestion et la
+                géo localisation des véhicules d&apos;une agence de voyage via le GPRS.)
+            </Description>
+            <QuitReason></QuitReason>
+            <IsLastItem>0</IsLastItem>
+            <IsLastItemWithJobTitle>0</IsLastItemWithJobTitle>
+        </EmploymentItem>
+
+    </EmploymentHistory>
+    <Skills>
+        <ComputerSkills>
+            <ComputerSkill id="41">CISCO CCNA1 et CCNA2</ComputerSkill>
+            <ComputerSkill id="201">VHDL</ComputerSkill>
+            <ComputerSkill id="202">SoC</ComputerSkill>
+            <ComputerSkill id="203">J2ME</ComputerSkill>
+            <ComputerSkill id="204">Objective C</ComputerSkill>
+            <ComputerSkill id="205">Symfony</ComputerSkill>
+            <ComputerSkill id="206">jQuery</ComputerSkill>
+            <ComputerSkill id="207">HTML</ComputerSkill>
+            <ComputerSkill id="208">XHTML</ComputerSkill>
+            <ComputerSkill id="209">Java Script</ComputerSkill>
+            <ComputerSkill id="210">CSS1/CSS2</ComputerSkill>
+            <ComputerSkill id="211">PHP4/PHP5</ComputerSkill>
+            <ComputerSkill id="212">XML</ComputerSkill>
+            <ComputerSkill id="213">XSL</ComputerSkill>
+            <ComputerSkill id="214">XSLT</ComputerSkill>
+            <ComputerSkill id="215">AJAX</ComputerSkill>
+            <ComputerSkill id="216">ASP</ComputerSkill>
+            <ComputerSkill id="217">Propel</ComputerSkill>
+            <ComputerSkill id="218">Doctrine</ComputerSkill>
+            <ComputerSkill id="219">TopLink</ComputerSkill>
+            <ComputerSkill id="220">Hibernate</ComputerSkill>
+            <ComputerSkill id="221">MS DOS</ComputerSkill>
+            <ComputerSkill id="222">Windows</ComputerSkill>
+            <ComputerSkill id="223">Unix</ComputerSkill>
+            <ComputerSkill id="224">Linux</ComputerSkill>
+            <ComputerSkill id="225">noyau 2.4 et 2.6</ComputerSkill>
+            <ComputerSkill id="226">GNOME</ComputerSkill>
+            <ComputerSkill id="227">XENOMAI</ComputerSkill>
+            <ComputerSkill id="228">Rational Rose 2003</ComputerSkill>
+            <ComputerSkill id="229">Mega 2005</ComputerSkill>
+            <ComputerSkill id="230">Macromedia Dreamweaver/MX</ComputerSkill>
+            <ComputerSkill id="231">MS Office (2003 et 2007)</ComputerSkill>
+            <ComputerSkill id="232">Visual Studio 6/2003/2005</ComputerSkill>
+            <ComputerSkill id="233">Eclipse 3.2/europa/3.4</ComputerSkill>
+            <ComputerSkill id="234">NetBeans</ComputerSkill>
+            <ComputerSkill id="235">Zend Studio</ComputerSkill>
+            <ComputerSkill id="236">CORBA</ComputerSkill>
+            <ComputerSkill id="237">SNMP...</ComputerSkill>
+            <ComputerSkill id="239">UBUNTU</ComputerSkill>
+            <ComputerSkill id="240">Debian</ComputerSkill>
+            <ComputerSkill id="241">Gentoo</ComputerSkill>
+            <ComputerSkill id="242">Centos</ComputerSkill>
+            <ComputerSkill id="243">ISO 9000 :2000</ComputerSkill>
+            <ComputerSkill id="244">CMMI</ComputerSkill>
+            <ComputerSkill id="86">J2EE</ComputerSkill>
+            <ComputerSkill id="87">EJB</ComputerSkill>
+            <ComputerSkill id="88">Delphi 6/InterBase</ComputerSkill>
+        </ComputerSkills>
+        <LanguageSkills>
+            <LanguageSkill>
+                <LanguageName id="142">Arabe</LanguageName>
+                <LanguageProficiency id="146">Langue maternelle</LanguageProficiency>
+            </LanguageSkill>
+            <LanguageSkill>
+                <LanguageName id="143">Français</LanguageName>
+                <LanguageProficiency id="147">très bien</LanguageProficiency>
+            </LanguageSkill>
+            <LanguageSkill>
+                <LanguageName id="144">Anglais</LanguageName>
+                <LanguageProficiency id="148">Professionnel</LanguageProficiency>
+            </LanguageSkill>
+            <LanguageSkill>
+                <LanguageName id="145">Allemand</LanguageName>
+                <LanguageProficiency id="149">notions de bases</LanguageProficiency>
+            </LanguageSkill>
+
+        </LanguageSkills>
+        <SoftSkills>
+
+        </SoftSkills>
+    </Skills>
+    <Other>
+        <Hobbies>
+
+        </Hobbies>
+        <References>
+
+        </References>
+        <Salary></Salary>
+        <Benefits></Benefits>
+        <TotalExperienceYears>4</TotalExperienceYears>
+    </Other>
+    <Document>Curriculum Vitae
+
+        MABROUK Skander né le 04-06-1985 à Biadha Gafsa-Tunisie
+        Adresse : 23 bis rue Tarek Ibn Zied - Menzah 5, Tunis, Tunisie
+        Tél : (+216) 22 923 568
+
+        E-Mail :    MabroukSkander@gmail.com
+        LinkedIn:   http://tn.linkedin.com/in/skonsoft
+        Viadeo :  http://www.viadeo.com/fr/profile/skander.mabrouk
+
+        Formation, Diplômes &amp; stages
+
+        Juillet 2011 : Diplôme national des ingénieurs spécialité informatique à
+        l&apos;école nationale des ingénieurs de Tunis. Mention assez-bien (13.02 / 20)
+
+        Octobre 2008 : Certification CEFEE (Certification Tuniso-allemande
+        d&apos;entrepreneuriat et de création d&apos;entreprise)
+
+        Juillet 2008 :
+
+        Maîtrise en Informatique Appliquée à l&apos;école supérieure de technologie et
+        d&apos;informatique à Carthage avec mention assez-bien (13.15 / 20).
+
+        Certifications CISCO CCNA1 et CCNA2
+        Juin 2006 : Diplôme des études universitaires du premier cycle (DEUPC)  en
+        Informatique Appliquée
+        2003-2004 : Baccalauréat avec mention assez-bien (12.62 / 20) section
+        sciences expérimentales
+        Compétences
+
+        Conception et mise en place des Systèmes d&apos;information
+        Conception et développement des applications web
+        Conception des systèmes embarqués &amp; les systèmes temps réel
+        Administration des systèmes (linux) et des réseaux
+        Conception et administration des bases de données réparties
+        Outils &amp; Systèmes d&apos;exploitation
+
+        VHDL, SoC, J2ME, Objective C, Symfony, jQuery, HTML/XHTML, Java Script,
+        CSS1/CSS2, PHP4/PHP5, XML/XSL/XSLT, AJAX, ASP, Propel, Doctrine, TopLink &amp;
+        Hibernate,  MS DOS, Windows, Unix/Linux (noyau 2.4 et 2.6 sous les
+        environnements KDE et GNOME), XENOMAI, Rational Rose 2003, Mega 2005,
+        Macromedia Dreamweaver/MX, MS Office (2003 et 2007), Visual Studio
+        6/2003/2005, Eclipse 3.2/europa/3.4, NetBeans, Zend Studio, CORBA, SNMP...
+        Maitrise parfaite  du système Linux(UBUNTU/Debian, Gentoo, Centos)
+        Connaissances
+
+        Droit tunisien &amp; informatique
+        Qualité (ISO 9000 :2000 et CMMI)
+        Comptabilité générale &amp; finace
+        Création &amp; gestion des entreprises.
+        Langues
+        Arabe : Langue maternelle
+        Français : très bien
+        Anglais : Professionnel
+        Allemand : notions de bases
+        Expérience
+        2011 : Analyste R&amp;D chez Cortix
+        Conception et mise en production de la version 2 de l&apos;outil cxlabs V2
+        propriétaire de cortix permettant la gestion de plus de 4000 sites web
+        hébergés chez cortix.
+        Contribution à la conception et le développement des différents modules du
+        CMS propriétaire de CORTIX basé sur  le framework symfony.
+        Mise en place des solutions de paiement  en ligne ATOS, PAYBOX &amp; PayPal
+        pour les différents clients de cortix.
+        Développement du plugin symfony sfLinedInPlugin
+        Développement d&apos;un jeu dédié aux mobiles en J2ME dans le cadre de ma
+        formation d&apos;ingénieurs à l&apos;ENIT.
+        Développement d&apos;une application en JAVA pour le benchmarking des RTOS
+        (systèmes temps-réel)
+        Mini-projet J2EE( EJB ) à l&apos;ENIT pour la gestion d&apos;emploi de temps.
+        2010 : Développeur symfony chez PHP Attitude
+        Conception, développement et mise en place du site de vente en ligne des
+        arts africains : www.art-africain.fr
+        Conception, développement et mise en place du site web dédié aux
+        smartphone : www.pronosticlive.com
+        conception et développement de l&apos;application iPhone Intellego
+        Développement du plugin symfony sfTeraWurflPlugin
+        2009 :  Développeur symfony chez Panteo
+        j&apos;ai contribué au développement site web : attractiveworld
+        Conception et développement de la version 2 du site web msb-online.org
+        2008 : Projet de fin d&apos;études (ESTI)
+        Conception et développement d&apos;une bibliothèque (PGUI) qui améliore le
+        développement en php5 coté serveur dans le cadre de mon projet de fin
+        d&apos;études chez Full Engeneering Systems.
+        2007 : Stage d&apos;été pour 3 mois
+        Conception et développement d&apos;un serveur FTP en MFC.
+        Stage d&apos;été chez TIM (Développement d&apos;une application en Delphi 6/InterBase
+        permettant la gestion des ressources humaines, la gestion et la
+        géo localisation des véhicules d&apos;une agence de voyage via le GPRS.)
+    </Document>
+    <AnnotatedDocument>&lt;br/&gt;
+&lt;br/&gt;
+        Curriculum Vitae&lt;br/&gt;
+&lt;br/&gt;
+&lt;tksource id=&quot;3&quot;&gt;&lt;tksource id=&quot;135&quot;&gt;&lt;tksource id=&quot;126&quot;&gt;MABROUK&lt;/tksource&gt; Skander&lt;/tksource&gt; &lt;tksource id=&quot;129&quot;&gt;né le&lt;/tksource&gt; &lt;tksource id=&quot;133&quot;&gt;04-06-1985&lt;/tksource&gt; &lt;tksource id=&quot;127&quot;&gt;à&lt;/tksource&gt; &lt;tksource id=&quot;130&quot;&gt;Biadha&lt;/tksource&gt; &lt;tksource id=&quot;136&quot;&gt;Gafsa-Tunisie&lt;/tksource&gt;&lt;br/&gt;
+&lt;tksource id=&quot;131&quot;&gt;Adresse :&lt;/tksource&gt; &lt;tksource id=&quot;132&quot;&gt;23 bis rue Tarek Ibn Zied - Menzah 5, Tunis, Tunisie&lt;/tksource&gt;&lt;br/&gt;
+&lt;tksource id=&quot;138&quot;&gt;Tél&lt;/tksource&gt; &lt;tksource id=&quot;139&quot;&gt;:&lt;/tksource&gt; &lt;tksource id=&quot;134&quot;&gt;(+216) 22 923 568&lt;/tksource&gt;&lt;br/&gt;
+&lt;br/&gt;
+&lt;tksource id=&quot;137&quot;&gt;E-Mail :&lt;/tksource&gt;    &lt;tksource id=&quot;128&quot;&gt;MabroukSkander@gmail.com&lt;/tksource&gt;&lt;br/&gt;
+&lt;tksource id=&quot;140&quot;&gt;LinkedIn&lt;/tksource&gt;:   http://tn.linkedin.com/in/skonsoft&lt;br/&gt;
+        Viadeo &lt;tksource id=&quot;141&quot;&gt;:  http&lt;/tksource&gt;://www.viadeo.com/fr/profile/skander.mabrouk&lt;br/&gt;
+&lt;/tksource&gt;&lt;br/&gt;
+&lt;tksource id=&quot;5&quot;&gt;Formation, Diplômes &amp;amp; stages&lt;br/&gt;
+&lt;br/&gt;
+&lt;tksource id=&quot;98&quot;&gt;&lt;tksource id=&quot;15&quot;&gt;Juillet 2011&lt;/tksource&gt; : &lt;tksource id=&quot;28&quot;&gt;Diplôme national des ingénieurs spécialité informatique&lt;/tksource&gt; à&lt;br/&gt;
+&lt;tksource id=&quot;35&quot;&gt;l&amp;apos;école nationale des ingénieurs de Tunis&lt;/tksource&gt;. &lt;tksource id=&quot;26&quot;&gt;Mention assez-bien&lt;/tksource&gt; (&lt;tksource id=&quot;16&quot;&gt;13.02 / 20&lt;/tksource&gt;)&lt;br/&gt;
+&lt;/tksource&gt;&lt;br/&gt;
+&lt;tksource id=&quot;99&quot;&gt;&lt;tksource id=&quot;17&quot;&gt;Octobre 2008&lt;/tksource&gt; : &lt;tksource id=&quot;29&quot;&gt;Certification CEFEE&lt;/tksource&gt; (Certification Tuniso-allemande&lt;br/&gt;
+        d&amp;apos;entrepreneuriat et de création d&amp;apos;entreprise)&lt;br/&gt;
+&lt;/tksource&gt;&lt;br/&gt;
+&lt;tksource id=&quot;100&quot;&gt;&lt;tksource id=&quot;18&quot;&gt;Juillet 2008&lt;/tksource&gt; :&lt;br/&gt;
+&lt;br/&gt;
+&lt;tksource id=&quot;30&quot;&gt;Maîtrise en Informatique Appliquée&lt;/tksource&gt; à &lt;tksource id=&quot;36&quot;&gt;l&amp;apos;école supérieure de technologie et&lt;br/&gt;
+        d&amp;apos;informatique à Carthage&lt;/tksource&gt; avec &lt;tksource id=&quot;27&quot;&gt;mention assez-bien&lt;/tksource&gt; (&lt;tksource id=&quot;19&quot;&gt;13.15 / 20&lt;/tksource&gt;).&lt;br/&gt;
+&lt;/tksource&gt;&lt;br/&gt;
+&lt;tksource id=&quot;101&quot;&gt; &lt;tksource id=&quot;31&quot;&gt;Certifications &lt;tksource id=&quot;41&quot;&gt;CISCO CCNA1 et CCNA2&lt;/tksource&gt;&lt;/tksource&gt;&lt;br/&gt;
+&lt;/tksource&gt;&lt;tksource id=&quot;102&quot;&gt;&lt;tksource id=&quot;20&quot;&gt;Juin 2006&lt;/tksource&gt; : &lt;tksource id=&quot;32&quot;&gt;Diplôme des études universitaires du premier cycle (DEUPC)  en&lt;br/&gt;
+        Informatique Appliquée&lt;/tksource&gt;&lt;br/&gt;
+&lt;/tksource&gt;&lt;tksource id=&quot;103&quot;&gt;&lt;tksource id=&quot;21&quot;&gt;2003-2004&lt;/tksource&gt; : &lt;tksource id=&quot;33&quot;&gt;Baccalauréat avec mention assez-bien (12.62 / 20) section&lt;br/&gt;
+        sciences expérimentales&lt;/tksource&gt;&lt;br/&gt;
+&lt;/tksource&gt;&lt;/tksource&gt;&lt;tksource id=&quot;6&quot;&gt;Compétences&lt;br/&gt;
+&lt;br/&gt;
+        Conception et mise en place des Systèmes d&amp;apos;information&lt;br/&gt;
+        Conception et développement des applications web&lt;br/&gt;
+        Conception des systèmes embarqués &amp;amp; les systèmes temps réel&lt;br/&gt;
+        Administration des systèmes (linux) et des réseaux&lt;br/&gt;
+        Conception et administration des bases de données réparties&lt;br/&gt;
+        Outils &amp;amp; Systèmes d&amp;apos;exploitation&lt;br/&gt;
+&lt;br/&gt;
+&lt;tksource id=&quot;201&quot;&gt;VHDL&lt;/tksource&gt;&lt;tksource id=&quot;154&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;202&quot;&gt;SoC&lt;/tksource&gt;&lt;tksource id=&quot;155&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;203&quot;&gt;J2ME&lt;/tksource&gt;&lt;tksource id=&quot;156&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;204&quot;&gt;Objective C&lt;/tksource&gt;&lt;tksource id=&quot;157&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;205&quot;&gt;Symfony&lt;/tksource&gt;&lt;tksource id=&quot;158&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;206&quot;&gt;jQuery&lt;/tksource&gt;&lt;tksource id=&quot;159&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;207&quot;&gt;HTML&lt;/tksource&gt;&lt;tksource id=&quot;160&quot;&gt;/&lt;/tksource&gt;&lt;tksource id=&quot;208&quot;&gt;XHTML&lt;/tksource&gt;&lt;tksource id=&quot;161&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;209&quot;&gt;Java Script&lt;/tksource&gt;&lt;tksource id=&quot;162&quot;&gt;,&lt;/tksource&gt;&lt;br/&gt;
+&lt;tksource id=&quot;210&quot;&gt;CSS1/CSS2&lt;/tksource&gt;&lt;tksource id=&quot;163&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;211&quot;&gt;PHP4/PHP5&lt;/tksource&gt;&lt;tksource id=&quot;164&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;212&quot;&gt;XML&lt;/tksource&gt;&lt;tksource id=&quot;165&quot;&gt;/&lt;/tksource&gt;&lt;tksource id=&quot;213&quot;&gt;XSL&lt;/tksource&gt;&lt;tksource id=&quot;166&quot;&gt;/&lt;/tksource&gt;&lt;tksource id=&quot;214&quot;&gt;XSLT&lt;/tksource&gt;&lt;tksource id=&quot;167&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;215&quot;&gt;AJAX&lt;/tksource&gt;&lt;tksource id=&quot;168&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;216&quot;&gt;ASP&lt;/tksource&gt;&lt;tksource id=&quot;169&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;217&quot;&gt;Propel&lt;/tksource&gt;&lt;tksource id=&quot;170&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;218&quot;&gt;Doctrine&lt;/tksource&gt;&lt;tksource id=&quot;171&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;219&quot;&gt;TopLink&lt;/tksource&gt; &lt;tksource id=&quot;172&quot;&gt;&amp;amp;&lt;/tksource&gt;&lt;br/&gt;
+&lt;tksource id=&quot;220&quot;&gt;Hibernate&lt;/tksource&gt;&lt;tksource id=&quot;173&quot;&gt;,&lt;/tksource&gt;  &lt;tksource id=&quot;221&quot;&gt;MS DOS&lt;/tksource&gt;&lt;tksource id=&quot;174&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;222&quot;&gt;Windows&lt;/tksource&gt;&lt;tksource id=&quot;175&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;223&quot;&gt;Unix&lt;/tksource&gt;&lt;tksource id=&quot;176&quot;&gt;/&lt;/tksource&gt;&lt;tksource id=&quot;224&quot;&gt;Linux&lt;/tksource&gt; &lt;tksource id=&quot;177&quot;&gt;(&lt;/tksource&gt;&lt;tksource id=&quot;225&quot;&gt;noyau 2.4 et 2.6&lt;/tksource&gt; &lt;tksource id=&quot;151&quot;&gt;sous les&lt;/tksource&gt;&lt;br/&gt;
+        environnements KDE et &lt;tksource id=&quot;226&quot;&gt;GNOME&lt;/tksource&gt;&lt;tksource id=&quot;178&quot;&gt;),&lt;/tksource&gt; &lt;tksource id=&quot;227&quot;&gt;XENOMAI&lt;/tksource&gt;&lt;tksource id=&quot;179&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;228&quot;&gt;Rational Rose 2003&lt;/tksource&gt;&lt;tksource id=&quot;180&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;229&quot;&gt;Mega 2005&lt;/tksource&gt;&lt;tksource id=&quot;181&quot;&gt;,&lt;/tksource&gt;&lt;br/&gt;
+&lt;tksource id=&quot;230&quot;&gt;Macromedia Dreamweaver/MX&lt;/tksource&gt;&lt;tksource id=&quot;182&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;231&quot;&gt;MS Office (2003 et 2007)&lt;/tksource&gt;&lt;tksource id=&quot;183&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;232&quot;&gt;Visual Studio&lt;br/&gt;
+        6/2003/2005&lt;/tksource&gt;&lt;tksource id=&quot;184&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;233&quot;&gt;Eclipse 3.2/europa/3.4&lt;/tksource&gt;&lt;tksource id=&quot;185&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;234&quot;&gt;NetBeans&lt;/tksource&gt;&lt;tksource id=&quot;186&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;235&quot;&gt;Zend Studio&lt;/tksource&gt;&lt;tksource id=&quot;187&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;236&quot;&gt;CORBA&lt;/tksource&gt;&lt;tksource id=&quot;188&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;237&quot;&gt;SNMP...&lt;/tksource&gt;&lt;br/&gt;
+&lt;tksource id=&quot;200&quot;&gt;Maitrise parfaite&lt;/tksource&gt;  &lt;tksource id=&quot;189&quot;&gt;du système&lt;/tksource&gt; &lt;tksource id=&quot;238&quot;&gt;Linux&lt;/tksource&gt;&lt;tksource id=&quot;190&quot;&gt;(&lt;/tksource&gt;&lt;tksource id=&quot;239&quot;&gt;UBUNTU&lt;/tksource&gt;&lt;tksource id=&quot;191&quot;&gt;/&lt;/tksource&gt;&lt;tksource id=&quot;240&quot;&gt;Debian&lt;/tksource&gt;&lt;tksource id=&quot;192&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;241&quot;&gt;Gentoo&lt;/tksource&gt;&lt;tksource id=&quot;193&quot;&gt;,&lt;/tksource&gt; &lt;tksource id=&quot;242&quot;&gt;Centos&lt;/tksource&gt;&lt;tksource id=&quot;152&quot;&gt;)&lt;/tksource&gt;&lt;br/&gt;
+        Connaissances&lt;br/&gt;
+&lt;br/&gt;
+        Droit tunisien &amp;amp; informatique&lt;br/&gt;
+&lt;tksource id=&quot;194&quot;&gt;Qualité (&lt;/tksource&gt;&lt;tksource id=&quot;243&quot;&gt;ISO 9000 :2000&lt;/tksource&gt; &lt;tksource id=&quot;195&quot;&gt;et&lt;/tksource&gt; &lt;tksource id=&quot;244&quot;&gt;CMMI&lt;/tksource&gt;&lt;tksource id=&quot;153&quot;&gt;)&lt;/tksource&gt;&lt;br/&gt;
+        Comptabilité générale &amp;amp; finace&lt;br/&gt;
+        Création &amp;amp; gestion des entreprises.&lt;br/&gt;
+&lt;tksource id=&quot;150&quot;&gt;Langues&lt;/tksource&gt;&lt;br/&gt;
+&lt;tksource id=&quot;142&quot;&gt;Arabe&lt;/tksource&gt; &lt;tksource id=&quot;196&quot;&gt;:&lt;/tksource&gt; &lt;tksource id=&quot;146&quot;&gt;Langue maternelle&lt;/tksource&gt;&lt;br/&gt;
+&lt;tksource id=&quot;143&quot;&gt;Français&lt;/tksource&gt; &lt;tksource id=&quot;197&quot;&gt;:&lt;/tksource&gt; &lt;tksource id=&quot;147&quot;&gt;très bien&lt;/tksource&gt;&lt;br/&gt;
+&lt;tksource id=&quot;144&quot;&gt;Anglais&lt;/tksource&gt; &lt;tksource id=&quot;198&quot;&gt;:&lt;/tksource&gt; &lt;tksource id=&quot;148&quot;&gt;Professionnel&lt;/tksource&gt;&lt;br/&gt;
+&lt;tksource id=&quot;145&quot;&gt;Allemand&lt;/tksource&gt; &lt;tksource id=&quot;199&quot;&gt;:&lt;/tksource&gt; &lt;tksource id=&quot;149&quot;&gt;notions de bases&lt;/tksource&gt;&lt;br/&gt;
+&lt;/tksource&gt;&lt;tksource id=&quot;7&quot;&gt;Expérience&lt;br/&gt;
+&lt;tksource id=&quot;94&quot;&gt;&lt;tksource id=&quot;104&quot;&gt;2011&lt;/tksource&gt; : &lt;tksource id=&quot;109&quot;&gt;Analyste R&amp;amp;D&lt;/tksource&gt; chez &lt;tksource id=&quot;113&quot;&gt;Cortix&lt;/tksource&gt;&lt;br/&gt;
+&lt;tksource id=&quot;119&quot;&gt;Conception et mise en production de la version 2 de l&amp;apos;outil cxlabs V2&lt;br/&gt;
+        propriétaire de cortix permettant la gestion de plus de 4000 sites web&lt;br/&gt;
+        hébergés chez cortix.&lt;br/&gt;
+        Contribution à la conception et le développement des différents modules du&lt;br/&gt;
+        CMS propriétaire de CORTIX basé sur  le framework symfony.&lt;br/&gt;
+        Mise en place des solutions de paiement  en ligne ATOS, PAYBOX &amp;amp; PayPal&lt;br/&gt;
+        pour les différents clients de cortix.&lt;br/&gt;
+        Développement du plugin&lt;/tksource&gt; &lt;tksource id=&quot;114&quot;&gt;symfony sfLinedInPlugin&lt;/tksource&gt;&lt;br/&gt;
+&lt;tksource id=&quot;120&quot;&gt;Développement d&amp;apos;un jeu dédié aux mobiles en J2ME dans le cadre de ma&lt;br/&gt;
+        formation d&amp;apos;ingénieurs à l&amp;apos;ENIT.&lt;br/&gt;
+        Développement d&amp;apos;une application en JAVA pour le benchmarking des RTOS&lt;br/&gt;
+        (systèmes temps-réel)&lt;br/&gt;
+        Mini-projet &lt;tksource id=&quot;86&quot;&gt;J2EE&lt;/tksource&gt;( &lt;tksource id=&quot;87&quot;&gt;EJB&lt;/tksource&gt; ) à l&amp;apos;ENIT pour la gestion d&amp;apos;emploi de temps.&lt;/tksource&gt;&lt;br/&gt;
+&lt;/tksource&gt;&lt;tksource id=&quot;95&quot;&gt;&lt;tksource id=&quot;105&quot;&gt;2010&lt;/tksource&gt; : &lt;tksource id=&quot;110&quot;&gt;Développeur symfony&lt;/tksource&gt; chez &lt;tksource id=&quot;115&quot;&gt;PHP Attitude&lt;/tksource&gt;&lt;br/&gt;
+&lt;tksource id=&quot;121&quot;&gt;Conception, développement et mise en place du site de vente en ligne des&lt;br/&gt;
+        arts africains : www.art-africain.fr&lt;br/&gt;
+        Conception, développement et mise en place du site web dédié aux&lt;br/&gt;
+        smartphone : www.pronosticlive.com&lt;br/&gt;
+        conception et développement de l&amp;apos;application iPhone Intellego&lt;br/&gt;
+        Développement du plugin symfony sfTeraWurflPlugin&lt;/tksource&gt;&lt;br/&gt;
+&lt;/tksource&gt;&lt;tksource id=&quot;96&quot;&gt;&lt;tksource id=&quot;106&quot;&gt;2009&lt;/tksource&gt; :  &lt;tksource id=&quot;111&quot;&gt;Développeur symfony&lt;/tksource&gt; chez &lt;tksource id=&quot;116&quot;&gt;Panteo&lt;/tksource&gt;&lt;br/&gt;
+&lt;tksource id=&quot;122&quot;&gt;j&amp;apos;ai contribué au développement site web : attractiveworld&lt;br/&gt;
+        Conception et développement de la version 2 du site web msb-online.org&lt;/tksource&gt;&lt;br/&gt;
+&lt;/tksource&gt;&lt;tksource id=&quot;97&quot;&gt;&lt;tksource id=&quot;107&quot;&gt;2008&lt;/tksource&gt; : &lt;tksource id=&quot;112&quot;&gt;Projet de fin d&amp;apos;études&lt;/tksource&gt; (&lt;tksource id=&quot;117&quot;&gt;ESTI&lt;/tksource&gt;)&lt;br/&gt;
+ &lt;tksource id=&quot;123&quot;&gt;Conception et développement d&amp;apos;une bibliothèque (PGUI) qui améliore le&lt;br/&gt;
+        développement en php5 coté serveur dans le cadre de mon projet de fin&lt;br/&gt;
+        d&amp;apos;études chez Full Engeneering Systems.&lt;/tksource&gt;&lt;br/&gt;
+&lt;tksource id=&quot;108&quot;&gt;2007&lt;/tksource&gt; : Stage d&amp;apos;été pour 3 mois&lt;br/&gt;
+&lt;tksource id=&quot;124&quot;&gt;Conception et développement d&amp;apos;un serveur FTP en MFC.&lt;br/&gt;
+        Stage d&amp;apos;été&lt;/tksource&gt; chez &lt;tksource id=&quot;118&quot;&gt;TIM&lt;/tksource&gt; (&lt;tksource id=&quot;125&quot;&gt;Développement d&amp;apos;une application en &lt;tksource id=&quot;88&quot;&gt;Delphi 6/InterBase&lt;/tksource&gt;&lt;br/&gt;
+        permettant la gestion des ressources humaines, la gestion et la&lt;br/&gt;
+        géo localisation des véhicules d&amp;apos;une agence de voyage via le GPRS.)&lt;/tksource&gt;&lt;br/&gt;
+&lt;/tksource&gt;&lt;/tksource&gt;&lt;br/&gt;
+    </AnnotatedDocument>
+</Profile>

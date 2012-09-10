@@ -12,6 +12,10 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class CvPhone
 {
+    const HOME_PHONE = 1;
+    const MOBILE_PHONE = 2;
+    const FAX_PHONE = 3;
+
     /**
      * @var integer $id
      *
