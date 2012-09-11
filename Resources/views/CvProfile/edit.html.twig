@@ -21,26 +21,28 @@
 
                 {% include "SkonsoftCvEditorBundle:CvProfile:tabForm.html.twig" with {'form':edit_form} %}
 
-                <p>
-                    <button class="btn" type="submit">
+                
+                    <button class="btn-large btn" type="submit">
                         <i class="icon-pencil"></i>
                         {{ 'edit'|trans }}
                     </button>
-                </p>
             </form>
 
-            <form action="{{ path('cv_profile_delete', { 'id': entity.id }) }}" method="post">
-                {{ form_widget(delete_form) }}
-                <button class="btn btn-danger" type="submit">
-                    <i class="icon-trash"></i>
-                    {{ 'delete'|trans }}
-                </button>
-            </form>
+                <div class="row-fluid">
+                    <form action="{{ path('cv_profile_delete', { 'id': entity.id }) }}" method="post">
+                    {{ form_widget(delete_form) }}
+                    <button class="btn btn-danger" type="submit">
+                        <i class="icon-trash"></i>
+                        {{ 'delete'|trans }}
+                    </button>
+                    <a class="btn" href="{{ path('cv_profile') }}">
+                        <i class="icon-th-list"></i>
+                        {{ 'back to the list'|trans }}
+                    </a>
+                </form>
 
-            <a class="btn" href="{{ path('cv_profile') }}">
-                <i class="icon-th-list"></i>
-                {{ 'back to the list'|trans }}
-            </a>
+                
+            </div>
        </div>
             
        

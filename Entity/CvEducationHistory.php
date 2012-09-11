@@ -12,6 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class CvEducationHistory
 {
+
     /**
      * @var integer $id
      *
@@ -94,7 +95,11 @@ class CvEducationHistory
      */
     private $cvProfile;
 
-
+    public function __toString()
+    {
+        return $this->degreeDirection;
+        
+    }
 
     /**
      * Get id
@@ -115,7 +120,7 @@ class CvEducationHistory
     public function setDegreeDirection($degreeDirection)
     {
         $this->degreeDirection = $degreeDirection;
-    
+
         return $this;
     }
 
@@ -138,7 +143,7 @@ class CvEducationHistory
     public function setEducationType($educationType)
     {
         $this->educationType = $educationType;
-    
+
         return $this;
     }
 
@@ -160,11 +165,12 @@ class CvEducationHistory
      */
     public function setStartDate($startDate)
     {
-        if( ! $startDate instanceof \DateTime){
-            $startDate = new \DateTime($startDate);
+        if (!$startDate instanceof \DateTime) {
+            $dateString = date('Ymd', strtotime($startDate));
+            $startDate = new \DateTime($dateString);
         }
         $this->startDate = $startDate;
-    
+
         return $this;
     }
 
@@ -186,11 +192,12 @@ class CvEducationHistory
      */
     public function setEndDate($endDate)
     {
-        if( ! $endDate instanceof \DateTime){
+        if (!$endDate instanceof \DateTime) {
+            $dateString = date('Ymd', strtotime($endDate));
             $endDate = new \DateTime($endDate);
         }
         $this->endDate = $endDate;
-    
+
         return $this;
     }
 
@@ -213,7 +220,7 @@ class CvEducationHistory
     public function setInstituteNameAndPlace($instituteNameAndPlace)
     {
         $this->instituteNameAndPlace = $instituteNameAndPlace;
-    
+
         return $this;
     }
 
@@ -236,7 +243,7 @@ class CvEducationHistory
     public function setDiploma($diploma)
     {
         $this->diploma = $diploma;
-    
+
         return $this;
     }
 
@@ -259,7 +266,7 @@ class CvEducationHistory
     public function setDiplomaDate($diplomaDate)
     {
         $this->diplomaDate = $diplomaDate;
-    
+
         return $this;
     }
 
@@ -282,7 +289,7 @@ class CvEducationHistory
     public function setSubject($subject)
     {
         $this->subject = $subject;
-    
+
         return $this;
     }
 
@@ -305,7 +312,7 @@ class CvEducationHistory
     public function setIsHighest($isHighest)
     {
         $this->isHighest = $isHighest;
-    
+
         return $this;
     }
 
@@ -328,7 +335,7 @@ class CvEducationHistory
     public function setCvProfile(\Skonsoft\Bundle\CvEditorBundle\Entity\CvProfile $cvProfile = null)
     {
         $this->cvProfile = $cvProfile;
-    
+
         return $this;
     }
 
@@ -341,4 +348,5 @@ class CvEducationHistory
     {
         return $this->cvProfile;
     }
+
 }

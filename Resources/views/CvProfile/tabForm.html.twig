@@ -172,7 +172,7 @@
         
                         {{ form_rest(form)}}
     </div>
-
+<hr/>
 </div>
 
 <script>
@@ -180,54 +180,55 @@ jQuery(function () {
     $('#cvTab a:first').tab('show');
     
     $("#addCvEducHistory").click(function () {
-        addTagForm("#studies #studies_form","addCvEducHistory" );
+        addTagForm("#studies #studies_form","addCvEducHistory", "Etude" );
     });
     
     $("#addCvEmployHistory").click(function () {
-        addTagForm("#experiences #experiences_form","addCvEmployHistory" );
+        addTagForm("#experiences #experiences_form","addCvEmployHistory", "Emploi" );
     });
     
     $("#addCvLanguageSkill").click(function () {
-        addTagForm("#others #languages_form","addCvLanguageSkill" );
+        addTagForm("#others #languages_form","addCvLanguageSkill", "langue" );
     });
     
     $("#addCvBenefit").click(function () {
-        addTagForm("#others #benefits_form","addCvBenefit" );
+        addTagForm("#others #benefits_form","addCvBenefit", "Bénfice" );
     });
     
     $("#addCvSoftSkills").click(function () {
-        addTagForm("#others #softSkills_form","addCvSoftSkills" );
+        addTagForm("#others #softSkills_form","addCvSoftSkills", "Soft" );
     });
     
     $("#addCvHobbies").click(function () {
-        addTagForm("#others #hobbies_form","addCvHobbies" );
+        addTagForm("#others #hobbies_form","addCvHobbies", "Hobby" );
     });
     
     $("#addCvReferences").click(function () {
-        addTagForm("#others #references_form","addCvReferences" );
+        addTagForm("#others #references_form","addCvReferences", "Référence" );
     });
     
     $("#addCvComputerSkills").click(function () {
-        addTagForm("#others #computerSkills_form","addCvComputerSkills" );
+        addTagForm("#others #computerSkills_form","addCvComputerSkills", "Computer" );
     });
     
     $("#addCvPhone").click(function () {
-        addTagForm("#coordonnee #phones_form","addCvPhone" );
+        addTagForm("#coordonnee #phones_form","addCvPhone", "Tél" );
     });
     
     $("#addCvEmail").click(function () {
-        addTagForm("#coordonnee #emails_form","addCvEmail" );
+        addTagForm("#coordonnee #emails_form","addCvEmail", "Email" );
     });
 });
       
-function addTagForm(div, idLinkAdd) {
+function addTagForm(div, idLinkAdd, name) {
     var collectionHolder = $(div+" > div");dump($(div+" > div"));
     // Récupère l'élément ayant l'attribut data-prototype comme expliqué plus tôt
     var prototype = collectionHolder.attr('data-prototype');
 
+    var newForm = prototype.replace(/__name__label__/g, name+" "+$(div).parent().children().size());
     // Remplace '__name__' dans le HTML du prototype par un nombre basé sur
     // la longueur de la collection courante
-    var newForm = prototype.replace(/__name__/g, $(div).parent().children().size());
+    newForm = newForm.replace(/__name__/g, $(div).parent().children().size());
 
     // Affiche le formulaire dans la page dans un div, avant le lien "ajouter"
     var $newFormLi = $('<div></div>').append(newForm);
