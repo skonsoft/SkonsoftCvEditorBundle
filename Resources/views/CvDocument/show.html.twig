@@ -1,0 +1,37 @@
+<h1>CvDocument</h1>
+
+<table class="record_properties">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+        <tr>
+            <th>Document</th>
+            <td>{{ entity.document }}</td>
+        </tr>
+        <tr>
+            <th>Annotateddocument</th>
+            <td>{{ entity.annotatedDocument }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('cv_document') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('cv_document_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('cv_document_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>

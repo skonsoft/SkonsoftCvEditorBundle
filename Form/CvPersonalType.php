@@ -17,7 +17,11 @@ class CvPersonalType extends AbstractType
             ->add('firstName')
             ->add('middleName')
             ->add('title')
-            ->add('dateOfBirth')
+            ->add('dateOfBirth','date',array(
+                'widget' => 'single_text',
+                'format' => 'dd/MM/yyyy',
+                'attr' => array('class' => 'datepicker')
+            ))
             ->add('placeOfBirth')
             ->add('maritalStatus')
             ->add('nationality')

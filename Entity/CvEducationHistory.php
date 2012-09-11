@@ -38,14 +38,14 @@ class CvEducationHistory
     /**
      * @var string $startDate
      *
-     * @ORM\Column(name="start_date", type="string", length=255, nullable=true)
+     * @ORM\Column(name="start_date", type="date", nullable=true)
      */
     private $startDate;
 
     /**
      * @var string $endDate
      *
-     * @ORM\Column(name="end_date", type="string", length=255, nullable=true)
+     * @ORM\Column(name="end_date", type="date", nullable=true)
      */
     private $endDate;
 
@@ -155,11 +155,14 @@ class CvEducationHistory
     /**
      * Set startDate
      *
-     * @param string $startDate
+     * @param \DateTime $startDate
      * @return CvEducationHistory
      */
     public function setStartDate($startDate)
     {
+        if( ! $startDate instanceof \DateTime){
+            $startDate = new \DateTime($startDate);
+        }
         $this->startDate = $startDate;
     
         return $this;
@@ -168,7 +171,7 @@ class CvEducationHistory
     /**
      * Get startDate
      *
-     * @return string 
+     * @return \DateTime 
      */
     public function getStartDate()
     {
@@ -178,11 +181,14 @@ class CvEducationHistory
     /**
      * Set endDate
      *
-     * @param string $endDate
+     * @param \DateTime $endDate
      * @return CvEducationHistory
      */
     public function setEndDate($endDate)
     {
+        if( ! $endDate instanceof \DateTime){
+            $endDate = new \DateTime($endDate);
+        }
         $this->endDate = $endDate;
     
         return $this;
@@ -191,7 +197,7 @@ class CvEducationHistory
     /**
      * Get endDate
      *
-     * @return string 
+     * @return \DateTime 
      */
     public function getEndDate()
     {

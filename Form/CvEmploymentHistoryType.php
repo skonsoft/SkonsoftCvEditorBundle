@@ -12,8 +12,16 @@ class CvEmploymentHistoryType extends AbstractType
     {
         $builder
             ->add('jobTitle')
-            ->add('startDate')
-            ->add('endDate')
+            ->add('startDate','date',array(
+                'widget' => 'single_text',
+                'format' => 'dd/MM/yyyy',
+                'attr' => array('class' => 'datepicker')
+            ))
+            ->add('endDate','date',array(
+                'widget' => 'single_text',
+                'format' => 'dd/MM/yyyy',
+                'attr' => array('class' => 'datepicker')
+            ))
             ->add('employerNameAndPlace')
             ->add('description')
             ->add('quitReason')

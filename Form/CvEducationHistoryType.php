@@ -13,8 +13,16 @@ class CvEducationHistoryType extends AbstractType
         $builder
             ->add('degreeDirection')
             ->add('educationType')
-            ->add('startDate')
-            ->add('endDate')
+            ->add('startDate','date',array(
+                'widget' => 'single_text',
+                'format' => 'dd/MM/yyyy',
+                'attr' => array('class' => 'datepicker')
+            ))
+            ->add('endDate','date',array(
+                'widget' => 'single_text',
+                'format' => 'dd/MM/yyyy',
+                'attr' => array('class' => 'datepicker')
+            ))
             ->add('instituteNameAndPlace')
             ->add('diploma')
             ->add('diplomaDate')

@@ -38,14 +38,14 @@ class CvEducationHistory
     /**
      * @var string $startDate
      *
-     * @ORM\Column(name="start_date", type="string", length=255, nullable=true)
+     * @ORM\Column(name="start_date", type="date", nullable=true)
      */
     private $startDate;
 
     /**
      * @var string $endDate
      *
-     * @ORM\Column(name="end_date", type="string", length=255, nullable=true)
+     * @ORM\Column(name="end_date", type="date", nullable=true)
      */
     private $endDate;
 

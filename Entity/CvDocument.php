@@ -35,12 +35,6 @@ class CvDocument
      */
     private $annotatedDocument;
 
-    /**
-     * @var CvProfile
-     * 
-     * @ORM\OneToOne(targetEntity="CvProfile", mappedBy="cvProfile")
-     */
-    private $cvProfile;
 
 
     /**
@@ -99,26 +93,4 @@ class CvDocument
         return $this->annotatedDocument;
     }
 
-    /**
-     * Set cvProfile
-     *
-     * @param Skonsoft\Bundle\CvEditorBundle\Entity\CvProfile $cvProfile
-     * @return CvDocument
-     */
-    public function setCvProfile(\Skonsoft\Bundle\CvEditorBundle\Entity\CvProfile $cvProfile = null)
-    {
-        $this->cvProfile = $cvProfile;
-    
-        return $this;
-    }
-
-    /**
-     * Get cvProfile
-     *
-     * @return Skonsoft\Bundle\CvEditorBundle\Entity\CvProfile 
-     */
-    public function getCvProfile()
-    {
-        return $this->cvProfile;
-    }
 }

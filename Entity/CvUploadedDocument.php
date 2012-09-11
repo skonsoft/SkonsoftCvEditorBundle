@@ -51,6 +51,7 @@ class CvUploadedDocument
 
     /**
      * @Assert\File(maxSize="6000000")
+     * @Assert\NotBlank()
      */
     public $file;
 
@@ -169,6 +170,11 @@ class CvUploadedDocument
 
         // set the path property to the filename where you'ved saved the file
         $this->path = realpath( $this->getUploadRootDir().'/'.$this->file->getClientOriginalName() );
+        
+        $this->fileType = $this->file->getClientMimeType();
+        
+        if(!file_exists( $this->path ) )
+            throw new \Exception("Uploaded file was not moved under uploaded dir");
 
         // clean up the file property as you won't need it anymore
         $this->file = null;
