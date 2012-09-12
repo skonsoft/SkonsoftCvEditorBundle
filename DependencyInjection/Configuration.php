@@ -20,9 +20,16 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('skonsoft_cv_editor');
 
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
+        $rootNode
+            ->children()
+                ->scalarNode('provider_service_id')
+                    ->defaultValue('skonsoft_cv_editor.textkernel_provider')
+                    ->info('Which service used to parse the CV')
+                    ->example('provider_service_id: skonsoft_cv_editor.textkernel_provider')
+                ->end()
+            ->end()
+        ;
+
 
         return $treeBuilder;
     }

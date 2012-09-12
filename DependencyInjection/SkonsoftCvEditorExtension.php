@@ -14,6 +14,7 @@ use Symfony\Component\DependencyInjection\Loader;
  */
 class SkonsoftCvEditorExtension extends Extension
 {
+
     /**
      * {@inheritDoc}
      */
@@ -22,7 +23,14 @@ class SkonsoftCvEditorExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.xml');
+
+        if (isset($config['provider_service_id'])) {
+            $container->setParameter("skonsoft_cv_editor.provider.service_id", $config['provider_service_id']);
+        }else{ //default is our service
+            $container->setParameter("skonsoft_cv_editor.provider.service_id", "skonsoft_cv_editor.textkernel_provider");
+        }
     }
+
 }

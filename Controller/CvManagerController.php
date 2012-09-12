@@ -36,8 +36,11 @@ class CvManagerController extends Controller
             throw $this->createNotFoundException('Uploaded cv not not found  ' . $cvUploadedDocumentId);
         }
         
-        $txtKernel = new TextKernelProvider("axones", "uzfp6738", "frenchdemo", "http://home.textkernel.nl/sourcebox/processAtomicPost.do");
-        $cvProfile = $txtKernel->load($cvUploadedDocument->getPath() );
+        $provider_service_id = $this->container->getParameter("skonsoft_cv_editor.provider.service_id");
+        
+        $provider = $this->get($provider_service_id);
+        
+        $cvProfile = $provider->load($cvUploadedDocument->getPath() );
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($cvProfile);

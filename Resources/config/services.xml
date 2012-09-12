@@ -4,17 +4,23 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
-    <!--
+
     <parameters>
-        <parameter key="skonsoft_cv_editor.example.class">Skonsoft\Bundle\CvEditorBundle\Example</parameter>
+        <parameter key="skonsoft_cv_editor.textkernel_provider.class">Skonsoft\Bundle\CvEditorBundle\Provider\TextKernelProvider</parameter>
+        <parameter key="skonsoft_cv_editor.textkernel_provider.username" />
+        <parameter key="skonsoft_cv_editor.textkernel_provider.password" />
+        <parameter key="skonsoft_cv_editor.textkernel_provider.account" />
+        <parameter key="skonsoft_cv_editor.textkernel_provider.url_post" />
+        
+        <parameter key="skonsoft_cv_editor.provider.service_id" />
     </parameters>
 
     <services>
-        <service id="skonsoft_cv_editor.example" class="%skonsoft_cv_editor.example.class%">
-            <argument type="service" id="service_id" />
-            <argument>plain_value</argument>
-            <argument>%parameter_name%</argument>
+        <service id="skonsoft_cv_editor.textkernel_provider" class="%skonsoft_cv_editor.textkernel_provider.class%">
+            <argument>%skonsoft_cv_editor.textkernel_provider.username%</argument>
+            <argument>%skonsoft_cv_editor.textkernel_provider.password%</argument>
+            <argument>%skonsoft_cv_editor.textkernel_provider.account%</argument>
         </service>
     </services>
-    -->
+
 </container>

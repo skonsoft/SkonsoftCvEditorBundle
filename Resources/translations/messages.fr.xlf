@@ -1,11 +1,147 @@
-<?xml version="1.0"?>
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" datatype="plaintext" original="file.ext">
-        <body>
-            <trans-unit id="1">
-                <source>Symfony2 is great</source>
-                <target>J'aime Symfony2</target>
-            </trans-unit>
-        </body>
-    </file>
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="1">
+        <source>CvClient</source>
+        <target>Client</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>edit</source>
+        <target>Editer</target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source>delete</source>
+        <target>Supprimer</target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source>back to the list</source>
+        <target>Retour à la liste</target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>creation</source>
+        <target>Création</target>
+      </trans-unit>
+      <trans-unit id="6">
+        <source>create</source>
+        <target>Créer</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>list</source>
+        <target>Liste</target>
+      </trans-unit>
+      <trans-unit id="8">
+        <source>Id</source>
+        <target>Numéro</target>
+      </trans-unit>
+      <trans-unit id="9">
+        <source>Company</source>
+        <target>Entreprise</target>
+      </trans-unit>
+      <trans-unit id="10">
+        <source>show</source>
+        <target>Afficher</target>
+      </trans-unit>
+      <trans-unit id="11">
+        <source>create a new entry</source>
+        <target>Créer une nouvelle entrée</target>
+      </trans-unit>
+      <trans-unit id="12">
+        <source>CvProfile</source>
+        <target>Profil</target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source>Add</source>
+        <target>Ajouter</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Language</source>
+        <target>Langue</target>
+      </trans-unit>
+      <trans-unit id="15">
+        <source>Salary</source>
+        <target>Salaire</target>
+      </trans-unit>
+      <trans-unit id="16">
+        <source>Totalexperienceyears</source>
+        <target>Total des années d'expérience</target>
+      </trans-unit>
+      <trans-unit id="17">
+        <source>CvReference</source>
+        <target>Référence</target>
+      </trans-unit>
+      <trans-unit id="18">
+        <source>Name</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit id="19">
+        <source>CvPersonal</source>
+        <target>Personel</target>
+      </trans-unit>
+      <trans-unit id="20">
+        <source>Lastname</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit id="21">
+        <source>Lastnameprefix</source>
+        <target>préfix du nom</target>
+      </trans-unit>
+      <trans-unit id="22">
+        <source>Initials</source>
+        <target>Les initiales</target>
+      </trans-unit>
+      <trans-unit id="23">
+        <source>Firstname</source>
+        <target>Prénom</target>
+      </trans-unit>
+      <trans-unit id="24">
+        <source>Middlename</source>
+        <target>patronyme</target>
+      </trans-unit>
+      <trans-unit id="25">
+        <source>Title</source>
+        <target>Titre</target>
+      </trans-unit>
+      <trans-unit id="26">
+        <source>Dateofbirth</source>
+        <target>Date de naissance</target>
+      </trans-unit>
+      <trans-unit id="27">
+        <source>Placeofbirth</source>
+        <target>Lieu de naissance</target>
+      </trans-unit>
+      <trans-unit id="28">
+        <source>Maritalstatus</source>
+        <target>état civil</target>
+      </trans-unit>
+      <trans-unit id="29">
+        <source>Nationality</source>
+        <target>Nationalité</target>
+      </trans-unit>
+      <trans-unit id="30">
+        <source>Gendercode</source>
+        <target>Code sexe</target>
+      </trans-unit>
+      <trans-unit id="31">
+        <source>Driverslicence</source>
+        <target>Permis de conduite</target>
+      </trans-unit>
+      <trans-unit id="32">
+        <source>Availability</source>
+        <target>disponibilité</target>
+      </trans-unit>
+      <trans-unit id="33">
+        <source>navbar.home</source>
+        <target>Accueil</target>
+      </trans-unit>
+      <trans-unit id="34">
+        <source>navbar.addCv</source>
+        <target>Ajouter un CV</target>
+      </trans-unit>
+      <trans-unit id="35">
+        <source>navbar.contact</source>
+        <target>Contact</target>
+      </trans-unit>
+    </body>
+  </file>
 </xliff>

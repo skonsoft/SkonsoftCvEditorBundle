@@ -4,7 +4,6 @@ namespace Skonsoft\Bundle\CvEditorBundle\Provider;
 
 use Skonsoft\Bundle\CvEditorBundle\Nusoap;
 use Symfony\Component\DomCrawler\Crawler;
-
 use \Skonsoft\Bundle\CvEditorBundle\Factory\CvProfileFactory;
 
 /**
@@ -41,12 +40,24 @@ class TextKernelProvider extends BaseProvider
      */
     protected $xml;
 
-    public function __construct($username, $password, $account, $url)
+    public function __construct($username = null, $password = null, $account = null, $url = null)
     {
+        if (empty($username))
+            throw new \InvalidArgumentException("Textkernel username is empty. You should define it in config.yml under parameter section with key: skonsoft_cv_editor.textkernel_provider.username");
+        if (empty($password))
+            throw new \InvalidArgumentException("Textkernel password is empty. You should define it in config.yml under parameter section with key: skonsoft_cv_editor.textkernel_provider.password");
+
+        if (empty($account))
+            throw new \InvalidArgumentException("Textkernel account is empty. You should define it in config.yml under parameter section with key: skonsoft_cv_editor.textkernel_provider.account");
+
         $this->setUsername($username);
+        
         $this->setPassword($password);
+        
         $this->setAccount($account);
-        $this->setUrl($url);
+
+        if (empty($url))
+            $this->setUrl("http://home.textkernel.nl/sourcebox/processAtomicPost.do");
     }
 
     /**
@@ -110,7 +121,7 @@ class TextKernelProvider extends BaseProvider
     /**
      * loads a document into CvProfile object
      * 
-     * @param string $document the path of document to load
+     * @param string $document the path of document to load (doc, pdf)
      * @return Skonsoft\Bundle\CvEditorBundle\Entity\CvProfile
      */
     public function load($document)
@@ -145,37 +156,36 @@ class TextKernelProvider extends BaseProvider
         $header = substr($response, 0, $header_size);
         $body = substr($response, $header_size);
         curl_close($ch);
-        
+
         $this->setXml($body);
     }
 
-    /*protected function postWithSoap()
-    {
-        $post = array(
-            //"uploaded_file" => "@" . $this->getDocument(),
-            "account" => $this->getAccount(),
-            "username" => $this->getUsername(),
-            "password" => $this->getPassword(),
-            "fileName" => basename($this->getDocument()),
-            "fileContent" => base64_encode(file_get_contents($this->getDocument()))
-        );
-        $client = new \Soapclient('http://home.textkernel.nl/sourcebox/soap/documentProcessor?wsdl', true);
-        //$client = new \Soapclient('http://home.textkernel.nl/sourcebox/soap/documentProcessor?wsdl');
-        $result = $client->call('processDocument', $post);
-        var_dump($result);
-        exit();
-    }*/
+    /* protected function postWithSoap()
+      {
+      $post = array(
+      //"uploaded_file" => "@" . $this->getDocument(),
+      "account" => $this->getAccount(),
+      "username" => $this->getUsername(),
+      "password" => $this->getPassword(),
+      "fileName" => basename($this->getDocument()),
+      "fileContent" => base64_encode(file_get_contents($this->getDocument()))
+      );
+      $client = new \Soapclient('http://home.textkernel.nl/sourcebox/soap/documentProcessor?wsdl', true);
+      //$client = new \Soapclient('http://home.textkernel.nl/sourcebox/soap/documentProcessor?wsdl');
+      $result = $client->call('processDocument', $post);
+      var_dump($result);
+      exit();
+      } */
 
     /**
      * parses the xml and loads it into CvProfile object 
      */
     protected function buildFromXml()
     {
-        $xml =  \simplexml_load_string($this->getXml());
-        if(!$xml)
+        $xml = \simplexml_load_string($this->getXml());
+        if (!$xml)
             throw new \Exception("Invalid Xml recieved from Text Kernel");
-        return  CvProfileFactory::getNewInstance()->loadFromXml($xml);
-        
+        return CvProfileFactory::getNewInstance()->loadFromXml($xml);
     }
 
 }
