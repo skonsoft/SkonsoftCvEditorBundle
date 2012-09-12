@@ -23,7 +23,7 @@ Installation is a quick 4 steps process:
 1. Download SkonsoftCvEditorBundle
 2. Enable the Bundle
 3. Configure your application's config.yml
-4. update your database
+4. Update your database
 
 ### Step 1: Install SkonsoftCvEditorBundle
 
@@ -41,7 +41,7 @@ Just check on [Packagist](http://packagist.org/packages/friendsofsymfony/oauth-s
 
 ### Step 2: Enable the bundle
 
-Finally, enable the bundle in the kernel:
+Enable the bundle in the kernel:
 
 ``` php
 <?php

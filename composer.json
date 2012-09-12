@@ -1,0 +1,22 @@
+{
+    "name":  "skonsoft/cv-editor-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony2 Cv editor bundle",
+    "keywords": ["cv", "curriculum vitae", "Text kernel"],
+    "homepage": "https://github.com/skonsoft/SkonsoftCvEditorBundle",
+    "authors": [
+        {
+          "name": "Skander MABROUK",
+          "email": "mabroukskander@gmail.com"
+        },
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": "2.1.*",
+    },
+    "suggest": {
+        "doctrine/doctrine-bundle": "*",
+        "toa/twitter-bootstrap-bundle": "*"
+    },
+    "minimum-stability": "dev"
+}
