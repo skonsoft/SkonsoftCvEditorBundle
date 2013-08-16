@@ -51,7 +51,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Skonsoft\Bundle\CvEditorBundle(),
+        new Skonsoft\Bundle\CvEditorBundle\SkonsoftCvEditorBundle(),
     );
 }
 ```
